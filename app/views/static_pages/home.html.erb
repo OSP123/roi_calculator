@@ -1,53 +1,239 @@
 <div class="container">
-	<div class="row">
-	  <div class="span2">
-		  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+	<div class="traffic_sources_container">
+	  <div id="web_ad_traffic_source" class="traffic_source">
+		    Cost Per Click: <input id="cpc_web_ad" type="text" name="cpc_web_ad"><br>
+  			Click Through Rate: <input id="ctr_web_ad" type="text" name="ctr_web_ad"><br>
+  			Visitors: <input id="visitors_web_ad" type="text" name="visitors_web_ad"><br>
+  			Clicks: <input id="clicks_web_ad" type="text" name="clicks_web_ad"><br>
+  			Total Cost: <input id="total_cost_web_ad" type="text" name="total_cost_web_ad"><br>
 	  </div>
-	  <div id="visitors_container" class="span2">
-	    Visitors
+	  <div id="email_traffic_source" class="traffic_source">
+		    Click Through Rate: <input id="ctr_email" type="text" name="ctr_email"><br>
+  			Emails: <input id="emails" type="text" name="emails"><br>
+  			Clicks: <input id="clicks_email" type="text" name="clicks_email"><br>
 	  </div>
-	  <div id="participants_container" class="span2">
-	    Participants
+	  <div id="website_traffic_source" class="traffic_source">
+		    Click Through Rate: <input id="ctr_website" type="text" name="ctr_website"><br>
+  			Visitors: <input id="visitors_website" type="text" name="visitors_website"><br>
+  			Clicks: <input id="clicks_website" type="text" name="clicks_website"><br>
 	  </div>
-	  <div id="conversion_rate_container" class="span1">
-	    Conversion Rate
-	  </div>
-	  <div id="actions_container" class="span2">
-	    Actions
-	  </div>
-	 	<div id="roi_container" class="span2">
-	    ROI per Action
-	  </div>
-	  <div id="total_roi_container" class="span1">
-	    Total ROI
-	  </div>
-	</div>
-	<div class="row">
-		<div class="span2">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-		</div>
-		<div class="span2">
-	  </div>
-	  <div class="span2">
-	  </div>
-	  <div class="span1">
-	  </div>
-	  <div class="span2">
-	  </div>
-	 	<div class="span2">
-	 		ROI per action
-	  </div>
-	  <div class="span1">
+	  <div id="facebook_ad_traffic_source" class="traffic_source">
+		    Cost Per Click: <input id="cpc_fb_ad" type="text" name="cpc_fb_ad"><br>
+  			Click Through Rate: <input id="ctr_fb_ad" type="text" name="ctr_fb_ad"><br>
+  			Visitors: <input id="visitors_fb_ad" type="text" name="visitors_fb_ad"><br>
+  			Clicks: <input id="clicks_fb_ad" type="text" name="clicks_fb_ad"><br>
+  			Total Cost: <input id="total_cost_fb_ad" type="text" name="total_cost_fb_ad"><br>
 	  </div>
 	</div>
-	<div class="row">
-		<div class="span2">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-		</div>
-	</div>
-	<div class="row">
-		<div class="span2">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-		</div>
-	</div>
+  <div id="visitors_container" class="span2">
+    Visitors: <input id="total_visitors" type="text" name="total_visitors"><br>
+  </div>
+  <div id="participants_container" class="span2">
+    Visitors: <input id="total_participants" type="text" name="total_participants"><br>
+  </div>
+  <div id="conversion_rate_container" class="span1">
+    Conversion Rate: <input id="conversion_rate" type="text" name="conversion_rate"><br>
+  </div>
+  <div id="actions_container" class="span2">
+    Actions
+    <select id="actions_drop_down">
+		  <option value="agree_to_tos">Agree to Terms and Service</option>
+		  <option value="authentication">Authentication</option>
+		  <option value="button_click">Button Click</option>
+		  <option value="cast_admin_vote">Cast Admin Vote</option>
+		  <option value="cast_user_vote">Cast User Vote</option>
+		  <option value="checkin_vote">Checkin</option>
+		  <option value="click_through">Click Through to a Link</option>
+		  <option value="code_redemption">Code Redemption</option>
+		  <option value="comment">Comment</option>
+		  <option value="compare_combos">Compare Combos</option>
+		  <option value="trivia_answer">Trivia Answer</option>
+		  <option value="prediction_answer">Prediction Answer</option>
+		  <option value="customer_integration_points">Customer Integration Points</option>
+		  <option value="email_share">Email Share</option>
+		  <option value="entered_in_promo">Entered in Promotion</option>
+		  <option value="facebook_tell">Facebook Tell</option>
+		  <option value="foursquare_connect">Foursquare Connect</option>
+		  <option value="friend_signin">Friend Signin</option>
+		  <option value="friend_signup">Friend Signup</option>
+		  <option value="group_reward">Group Reward</option>
+		  <option value="hashtag">Hashtag</option>
+		  <option value="instagram_follow">Instagram Follow</option>
+		  <option value="facebook_like">Facebook Like</option>
+		  <option value="mailing_list">Mailing List</option>
+		  <option value="network_bonus">Network Bonus</option>
+		  <option value="page_view">Page View</option>
+		  <option value="peer_vote">Peer Vote</option>
+		  <option value="pin_to_pinterest">Pin to Pinterest</option>
+		  <option value="pinterest_follow">Pinterest Follow</option>
+		  <option value="prize_entries">Prize Entries</option>
+		  <option value="puzzle_piece">Puzzle Piece</option>
+		  <option value="referred_signup">Referred Signup</option>
+		  <option value="referred_visit">Referred Visit</option>
+		  <option value="registration">Registration</option>
+		  <option value="reminder">Reminder Optin</option>
+		  <option value="poll_survey">Poll Survey</option>
+		  <option value="tumblr_follow">Tumblr Follow</option>
+		  <option value="twitter">Twitter Follow</option>
+		  <option value="twitter_share">Twitter Share</option>
+		  <option value="uploaded_content">Uploaded Content</option>
+		  <option value="uploaded_image">Uploaded Image</option>
+		  <option value="uploaded_sound">Uploaded Sound</option>
+		  <option value="uploaded_story">Uploaded Story</option>
+		  <option value="uploaded_video">Uploaded Video</option>
+		  <option value="visiting_user_session">Visiting User Session</option>
+		  <option value="watch_video">Watch Video</option>
+		  <option value="write_in_entry">Write-in Entry</option>
+		</select>
+			<p id="agree_to_tos_text" >Agree to Terms and Service</p>
+		  <p id="authentication_text">Authentication</p>
+		  <p id="button_click_text" >Button Click</p>
+		  <p id="cast_admin_vote_text" >Cast Admin Vote</p>
+		  <p id="cast_user_vote_text" >Cast User Vote</p>
+		  <p id="checkin_text">Checkin</p>
+		  <p id="click_through_text" >Click Through to a Link</p>
+		  <p id="code_redemption_text">Code Redemption</p>
+		  <p id="comment_text">Comment</p>
+		  <p id="compare_combos_text">Compare Combos</p>
+		  <p id="trivia_answer_text">Trivia Answer</p>
+		  <p id="prediction_answer_text">Prediction Answer</p>
+		  <p id="customer_integration_points_text">Customer Integration Points</p>
+		  <p id="email_share_text">Email Share</p>
+		  <p id="entered_in_promo_text">Entered in Promotion</p>
+		  <p id="facebook_tell_text" >Facebook Tell</p>
+		  <p id="foursquare_connect_text">Foursquare Connect</p>
+		  <p id="friend_signin_text">Friend Signin</p>
+		  <p id="friend_signup_text">Friend Signup</p>
+		  <p id="group_reward_text">Group Reward</p>
+		  <p id="hashtag_text">Hashtag</p>
+		  <p id="instagram_follow_text">Instagram Follow</p>
+		  <p id="facebook_likes_text">Facebook Like</p>
+		  <p id="mailing_list_text">Mailing List</p>
+		  <p id="network_bonus_text">Network Bonus</p>
+		  <p id="page_view_text">Page View</p>
+		  <p id="peer_vote_text">Peer Vote</p>
+		  <p id="pin_to_pinterest_text">Pin to Pinterest</p>
+		  <p id="pinterest_follow_text">Pinterest Follow</p>
+		  <p id="prize_entries_text">Prize Entries</p>
+		  <p id="puzzle_piece_text">Puzzle Piece</p>
+		  <p id="referred_signup_text">Referred Signup</p>
+		  <p id="referred_visit_text">Referred Visit</p>
+		  <p id="registration_text">Registration</p>
+		  <p id="reminder_optin_text">Reminder Optin</p>
+		  <p id="poll_survey_text">Poll Survey</p>
+		  <p id="tumblr_follow_text">Tumblr Follow</p>
+		  <p id="twitter_follow_text">Twitter Follow</p>
+		  <p id="twitter_share_text">Twitter Share</p>
+		  <p id="uploaded_content_text">Uploaded Content</p>
+		  <p id="uploaded_image_text">Uploaded Image</p>
+		  <p id="uploaded_sound_text">Uploaded Sound</p>
+		  <p id="uploaded_story_text">Uploaded Story</p>
+		  <p id="uploaded_video_text">Uploaded Video</p>
+		  <p id="visiting_user_session_text">Visiting User Session</p>
+		  <p id="watch_video_text">Watch Video</p>
+		  <p id="write_in_entry_text">Write-in Entry</p>
+  </div>
+  <div id="roi_defined_container" class="span2">
+    	<input id="agree_to_tos_defined"><br>
+		  <input id="authentication_defined"><br>
+		  <input id="button_click_defined" ><br>
+		  <input id="cast_admin_vote_defined" ><br>
+		  <input id="cast_user_vote_defined" ><br>
+		  <input id="checkin_defined"><br>
+		  <input id="click_through_defined" ><br>
+		  <input id="code_redemption_defined"><br>
+		  <input id="comment_defined"><br>
+		  <input id="compare_combos_defined"><br>
+		  <input id="trivia_answer_defined"><br>
+		  <input id="prediction_answer_defined"><br>
+		  <input id="customer_integration_points_defined"><br>
+		  <input id="email_share_defined"><br>
+		  <input id="entered_in_promo_defined"><br>
+		  <input id="facebook_tell_defined" ><br>
+		  <input id="foursquare_connect_defined"><br>
+		  <input id="friend_signin_defined"><br>
+		  <input id="friend_signup_defined"><br>
+		  <input id="group_reward_defined"><br>
+		  <input id="hashtag_defined"><br>
+		  <input id="instagram_follow_defined"><br>
+		  <input id="facebook_likes_defined"><br>
+		  <input id="mailing_list_defined"><br>
+		  <input id="network_bonus_defined"><br>
+		  <input id="page_view_defined"><br>
+		  <input id="peer_vote_defined"><br>
+		  <input id="pin_to_pinterest_defined"><br>
+		  <input id="pinterest_follow_defined"><br>
+		  <input id="prize_entries_defined"><br>
+		  <input id="puzzle_piece_defined"><br>
+		  <input id="referred_signup_defined"><br>
+		  <input id="referred_visit_defined"><br>
+		  <input id="registration_defined"><br>
+		  <input id="reminder_optin_defined"><br>
+		  <input id="poll_survey_defined"><br>
+		  <input id="tumblr_follow_defined"><br>
+		  <input id="twitter_follow_defined"><br>
+		  <input id="twitter_share_defined"><br>
+		  <input id="uploaded_content_defined"><br>
+		  <input id="uploaded_image_defined"><br>
+		  <input id="uploaded_sound_defined"><br>
+		  <input id="uploaded_story_defined"><br>
+		  <input id="uploaded_video_defined"><br>
+		  <input id="visiting_user_session_defined"><br>
+		  <input id="watch_video_defined"><br>
+		  <input id="write_in_entry_defined"><br>
+  </div>
+ 	<div id="roi_per_action_container" class="span2">
+ 			ROI Per Action
+      <input id="agree_to_tos__calculated"><br>
+		  <input id="authentication_calculated"><br>
+		  <input id="button_click_calculated" ><br>
+		  <input id="cast_admin_vote_calculated" ><br>
+		  <input id="cast_user_vote_calculated" ><br>
+		  <input id="checkin_calculated"><br>
+		  <input id="click_through_calculated" ><br>
+		  <input id="code_redemption_calculated"><br>
+		  <input id="comment_calculated"><br>
+		  <input id="compare_combos_calculated"><br>
+		  <input id="trivia_answer_calculated"><br>
+		  <input id="prediction_answer_calculated"><br>
+		  <input id="customer_integration_points_calculated"><br>
+		  <input id="email_share_calculated"><br>
+		  <input id="entered_in_promo_calculated"><br>
+		  <input id="facebook_tell_calculated" ><br>
+		  <input id="foursquare_connect_calculated"><br>
+		  <input id="friend_signin_calculated"><br>
+		  <input id="friend_signup_calculated"><br>
+		  <input id="group_reward_calculated"><br>
+		  <input id="hashtag_calculated"><br>
+		  <input id="instagram_follow_calculated"><br>
+		  <input id="facebook_likes_calculated"><br>
+		  <input id="mailing_list_calculated"><br>
+		  <input id="network_bonus_calculated"><br>
+		  <input id="page_view_calculated"><br>
+		  <input id="peer_vote_calculated"><br>
+		  <input id="pin_to_pinterest_calculated"><br>
+		  <input id="pinterest_follow_calculated"><br>
+		  <input id="prize_entries_calculated"><br>
+		  <input id="puzzle_piece_calculated"><br>
+		  <input id="referred_signup_calculated"><br>
+		  <input id="referred_visit_calculated"><br>
+		  <input id="registration_calculated"><br>
+		  <input id="reminder_optin_calculated"><br>
+		  <input id="poll_survey_calculated"><br>
+		  <input id="tumblr_follow_calculated"><br>
+		  <input id="twitter_follow_calculated"><br>
+		  <input id="twitter_share_calculated"><br>
+		  <input id="uploaded_content_calculated"><br>
+		  <input id="uploaded_image_calculated"><br>
+		  <input id="uploaded_sound_calculated"><br>
+		  <input id="uploaded_story_calculated"><br>
+		  <input id="uploaded_video_calculated"><br>
+		  <input id="visiting_user_session_calculated"><br>
+		  <input id="watch_video_calculated"><br>
+		  <input id="write_in_entry_calculated"><br>
+  </div>
+  <div id="total_roi_container" class="span1">
+    Total ROI
+    <input id="total_roi"><br>
+  </div>
 </div>
