@@ -10,9 +10,10 @@
 }
 
 .container #traffic_sources_container {
-	width: 150px;
+	width: 200px;
 	float: left;
 	border: none;
+	text-align: center;
 }
 
 
@@ -38,6 +39,27 @@
 	float: left;
 }
 
-#actions_container p, #roi_defined_container div, #roi_per_action_container div {
-	display: none;
+#action_container {
+	width: 250px;
 }
+
+#middle_container {
+	width: 217px;
+}
+
+#actions_container, #roi_per_action_container, #middle_container {
+	text-align: center;
+}
+
+#actions_container div, #roi_per_action_container div {
+	display: none;
+	width: 260px;
+}
+
+div#click_through_defined, div#facebook_likes_defined, div#instagram_follow_defined, div#poll_survey_defined, div#code_redemption_defined {
+	display: block;
+} 
+
+div#click_through_calculated, div#calculated, div#instagram_follow_calculated, div#poll_survey_calculated, div#code_redemption_calculated {
+	display: block;
+} 
