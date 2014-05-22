@@ -3,184 +3,237 @@
 	<div id="traffic_sources_container" class="sub_container">
 		<h1>Traffic Sources</h1>
 	  <div id="web_ad_traffic_source" class="traffic_source">
-		    Cost Per Click: <input id="cpc_web_ad" type="text" value="$5"><br>
-  			Total: <input id="total_cost_web_ad" type="text" value="10000" ><br>
+    <h2>Web Ads</h2>
+		    Cost Per Click: <input id="cpc_web_ad" type="number" value="5"><br>
+  			Visitors: <input id="visitors_web_ad" type="number" value="100000" ><br>
+  			Total Visitors: <input id="total_visitors_web_ad" type="number" value="100000" ><br>
 	  </div>
 	  <div id="email_traffic_source" class="traffic_source">
-		    Click Through Rate: <input id="ctr_email" type="text" value="10%"><br>
-  			Total: <input id="emails" type="text" name="emails" value="100000"><br>
+    <h2>Emails</h2>
+		    Click Through Rate: <input id="ctr_email" type="number" value="5"><br>
+  			Visitors: <input id="emails" type="number" value="100000"><br>
+  			Total Visitors: <input id="total_visitors_emails" type="number" value="5000"><br>
 	  </div>
 	  <div id="website_traffic_source" class="traffic_source">
-		    Click Through Rate: <input id="ctr_website" type="text" value="5%"><br>
-  			Total: <input id="visitors_website" type="text" value="100000"><br>
+    <h2>Website</h2>
+		    Click Through Rate: <input id="ctr_website" type="number" value="5"><br>
+  			Total: <input id="visitors_website" type="number" value="100000"><br>
+  			Total Visitors: <input id="total_visitors_website" type="number" value="5000"><br>
 	  </div>
 	  <div id="facebook_ad_traffic_source" class="traffic_source">
-		    Cost Per Click: <input id="cpc_fb_ad" type="text" value="$3"><br>
-  			Total: <input id="total_cost_fb_ad" type="text" value="100000"><br>
+    <h2>Facebook Ads</h2>
+		    Cost Per Click: <input id="cpc_fb_ad" type="number" value="3"><br>
+  			Total: <input id="visitors_fb_ad" type="number" value="100000"><br>
+  			Total Visitors: <input id="total_visitors_fb_ad" type="number" value="100000"><br>
 	  </div>
-    Total Cost: <input id="total_cost" type="text" value="$20000"><br>
+    Total Cost: <input id="total_cost" type="number" value="20000"><br>
 	</div>
 	<div id="middle_container" class="sub_container">
 	<h1>Conversion</h1>
 	  <div id="visitors_container" class="conversion_sub_container">
-	    Visitors: <input id="total_visitors" type="text" value="1000000"><br>
+	    Visitors: <input id="total_visitors" type="number" value="310000"><br>
 	  </div>
 	  <div id="participants_container" class="conversion_sub_container">
-	    Participants: <input id="total_participants" type="text" value="350000"><br>
+	    Participants: <input id="total_participants" type="number" value="108500"><br>
 	  </div>
 	  <div id="conversion_rate_container" class="conversion_sub_container">
-	    Conversion Rate: <input id="conversion_rate" type="text" value="35%"><br>
+	    Conversion Rate: <input id="conversion_rate" type="number" value="35"><br>
 	  </div>
 	</div>
   <div id="actions_container" class="sub_container">
     <h1>Actions</h1>
     <select id="actions_drop_down">
-		  <option value="agree_to_tos">Agree to Terms and Service</option>
-		  <option value="authentication">Authentication</option>
-		  <option value="button_click">Button Click</option>
-		  <option value="cast_admin_vote">Cast Admin Vote</option>
-		  <option value="cast_user_vote">Cast User Vote</option>
-		  <option value="checkin">Checkin</option>
 		  <option value="click_through">Click Through</option>
-		  <option value="code_redemption">Code Redemption</option>
 		  <option value="comment">Comment</option>
-		  <option value="compare_combos">Compare Combinations</option>
-		  <option value="trivia_answer">Trivia Answer</option>
-		  <option value="prediction_answer">Prediction Answer</option>
-		  <option value="customer_integration_points">Customer Integration Points</option>
-		  <option value="email_share">Email Share</option>
-		  <option value="entered_in_promo">Entered in Promotion</option>
 		  <option value="facebook_tell">Facebook Tell</option>
-		  <option value="foursquare_connect">Foursquare Connect</option>
-		  <option value="friend_signin">Friend Signin</option>
-		  <option value="friend_signup">Friend Signup</option>
-		  <option value="group_reward">Group Reward</option>
 		  <option value="hashtag">Hashtag</option>
 		  <option value="instagram_follow">Instagram Follow</option>
 		  <option value="facebook_like">Facebook Like</option>
 		  <option value="mailing_list">Mailing List</option>
-		  <option value="network_bonus">Network Bonus</option>
-		  <option value="page_view">Page View</option>
-		  <option value="peer_vote">Peer Vote</option>
-		  <option value="pin_to_pinterest">Pin to Pinterest</option>
 		  <option value="pinterest_follow">Pinterest Follow</option>
-		  <option value="prize_entries">Prize Entries</option>
 		  <option value="puzzle_piece">Puzzle Piece</option>
-		  <option value="referred_signup">Referred Signup</option>
-		  <option value="referred_visit">Referred Visit</option>
-		  <option value="registration">Registration</option>
-		  <option value="reminder">Reminder Optin</option>
 		  <option value="poll_survey">Poll Survey</option>
 		  <option value="tumblr_follow">Tumblr Follow</option>
-		  <option value="twitter">Twitter Follow</option>
+		  <option value="twitter_follow">Twitter Follow</option>
 		  <option value="twitter_share">Twitter Share</option>
-		  <option value="uploaded_content">Uploaded Content</option>
-		  <option value="uploaded_image">Uploaded Image</option>
-		  <option value="uploaded_sound">Uploaded Sound</option>
-		  <option value="uploaded_story">Uploaded Story</option>
-		  <option value="uploaded_video">Uploaded Video</option>
-		  <option value="visiting_user_session">Visiting User Session</option>
 		  <option value="watch_video">Watch Video</option>
-		  <option value="write_in_entry">Write-in Entry</option>
 		</select>
 			<button id="add_action" type="button">Add an Action</button>
-    	<div id="agree_to_tos_defined">Agree to TOS<input value="$5"></div>
-		  <div id="authentication_defined">Authentication<input  value="$5"></div>
-		  <div id="button_click_defined">Button Click<input  value="$5"></div>
-		  <div id="cast_admin_vote_defined">Cast Admin Vote<input  value="$5"></div>
-		  <div id="cast_user_vote_defined">Cast User Vote<input  value="$5"></div>
-		  <div id="checkin_defined">Checkin<input  value="$5"></div>
-		  <div id="click_through_defined">Click Through<input value="$5" value="$5"></div>
-		  <div id="code_redemption_defined">Code Redemption<input value="$5" value="$5"></div>
-		  <div id="comment_defined">Comment<input  value="$5"></div>
-		  <div id="compare_combos_defined">Compare Combinations<input  value="$5"></div>
-		  <div id="trivia_answer_defined">Trivia Answer<input  value="$5"></div>
-		  <div id="prediction_answer_defined">Prediction Answer<input  value="$5"></div>
-		  <div id="customer_integration_points_defined">Customer Integration Points<input  value="$5"></div>
-		  <div id="email_share_defined"><input >Email Share</div>
-		  <div id="entered_in_promo_defined"><input >Entered in Promotion</div>
-		  <div id="facebook_tell_defined">Facebook Tell<input  value="$5"></div>
-		  <div id="foursquare_connect_defined">Foursquare Connect<input  value="$5"></div>
-		  <div id="friend_signin_defined">Friend Signin<input  value="$5"></div>
-		  <div id="friend_signup_defined">Friend Signup<input  value="$5"></div>
-		  <div id="group_reward_defined">Group Reward<input  value="$5"></div>
-		  <div id="hashtag_defined">Hashtag<input  value="$5"></div>
-		  <div id="instagram_follow_defined">Instagram Follow<input value="$5"></div>
-		  <div id="facebook_likes_defined">Facebook Likes<input value="$5"></div>
-		  <div id="mailing_list_defined">Mailing List<input  value="$5"></div>
-		  <div id="network_bonus_defined">Network Bonus<input  value="$5"></div>
-		  <div id="page_view_defined">Page View<input  value="$5"></div>
-		  <div id="peer_vote_defined">Peer Vote<input  value="$5"></div>
-		  <div id="pin_to_pinterest_defined">Pin to Pinterest<input  value="$5"></div>
-		  <div id="pinterest_follow_defined">Pinterest Follow<input  value="$5"></div>
-		  <div id="prize_entries_defined">Prize Entries<input  value="$5"></div>
-		  <div id="puzzle_piece_defined">Puzzle Piece<input  value="$5"></div>
-		  <div id="referred_signup_defined">Referred Signup<input  value="$5"></div>
-		  <div id="referred_visit_defined">Referred Visit<input  value="$5"></div>
-		  <div id="registration_defined">Registration<input  value="$5"></div>
-		  <div id="reminder_optin_defined">Reminder Optin<input  value="$5"></div>
-		  <div id="poll_survey_defined">Poll Survey<input value="$5"></div>
-		  <div id="tumblr_follow_defined">Tumblr Follow<input  value="$5"></div>
-		  <div id="twitter_follow_defined">Twitter Follow<input  value="$5"></div>
-		  <div id="twitter_share_defined">Twitter Share<input  value="$5"></div>
-		  <div id="uploaded_content_defined">Uploaded Content<input  value="$5"></div>
-		  <div id="uploaded_image_defined">Uploaded Image<input  value="$5"></div>
-		  <div id="uploaded_sound_defined">Uploaded Sound<input  value="$5"></div>
-		  <div id="uploaded_story_defined">Uploaded Story<input  value="$5"></div>
-		  <div id="uploaded_video_defined">Uploaded Video<input  value="$5"></div>
-		  <div id="visiting_user_session_defined">Visiting User Session<input  value="$5"></div>
-		  <div id="watch_video_defined">Watch Video<input  value="$5"></div>
-		  <div id="write_in_entry_defined">Write in Entry<input  value="$5"></div>
+		  <div id="click_through_defined">Click Through</div>
+		  <div id="comment_defined">Comment</div>
+		  <div id="facebook_tell_defined">Facebook Tell</div>
+		  <div id="hashtag_defined">Hashtag</div>
+		  <div id="instagram_follow_defined">Instagram Follow</div>
+		  <div id="facebook_like_defined">Facebook Likes</div>
+		  <div id="mailing_list_defined">Mailing List</div>
+		  <div id="pinterest_follow_defined">Pinterest Follow</div>
+		  <div id="puzzle_piece_defined">Puzzle Piece</div>
+		  <div id="poll_survey_defined">Poll Survey</div>
+		  <div id="tumblr_follow_defined">Tumblr Follow</div>
+		  <div id="twitter_follow_defined">Twitter Follow</div>
+		  <div id="twitter_share_defined">Twitter Share</div>
+		  <div id="watch_video_defined">Watch Video</div>
 	</div>
  	<div id="roi_per_action_container" class="sub_container">
  			<h1>Calculator</h1>
-      <div id="agree_to_tos_calculated">Agree to TOS<input  value="$5"><input value="$5"></div>
-		  <div id="authentication_calculated">Authentication<input  value="$5"><input value="$5"></div>
-		  <div id="button_click_calculated">Button Click<input  value="$5"><input value="$5"></div>
-		  <div id="cast_admin_vote_calculated">Cast Admin Vote<input  value="$5"><input value="$5"></div>
-		  <div id="cast_user_vote_calculated">Cast User Vote<input  value="$5"><input value="$5"></div>
-		  <div id="checkin_calculated">Checkin<input  value="$5"><input value="$5"></div>
-		  <div id="click_through_calculated">Click Through<input value="$5"><input value="$5"></div>
-		  <div id="code_redemption_calculated">Code Redemption<input value="$5"><input value="$5"></div>
-		  <div id="comment_calculated">Comment<input  value="$5"><input value="$5"></div>
-		  <div id="compare_combos_calculated">Compare Combos<input  value="$5"><input value="$5"></div>
-		  <div id="trivia_answer_calculated">Trivia Answer<input  value="$5"><input value="$5"></div>
-		  <div id="prediction_answer_calculated">Prediction Answer<input  value="$5"><input value="$5"></div>
-		  <div id="customer_integration_points_calculated">Customer Integration Points<input value="$5"><input value="$5"></div>
-		  <div id="email_share_calculated">Email Share<input  value="$5"><input value="$5"></div>
-		  <div id="entered_in_promo_calculated">Entered in Promo<input  value="$5"><input value="$5"></div>
-		  <div id="facebook_tell_calculated">Facebook Tell<input  value="$5"><input value="$5"></div>
-		  <div id="foursquare_connect_calculated">Foursquare Connect<input  value="$5"><input value="$5"></div>
-		  <div id="friend_signin_calculated">Friend Signin<input  value="$5"><input value="$5"></div>
-		  <div id="friend_signup_calculated">Friend Signup<input  value="$5"><input value="$5"></div>
-		  <div id="group_reward_calculated">Group Reward<input  value="$5"><input value="$5"></div>
-		  <div id="hashtag_calculated">Hashtag<input  value="$5"><input value="$5"></div>
-		  <div id="instagram_follow_calculated">Instagram Follow<input value="$5"><input value="$5"></div>
-		  <div id="facebook_likes_calculated">Facebook Likes<input value="$5"><input value="$5"></div>
-		  <div id="mailing_list_calculated">Mailing List<input  value="$5"><input value="$5"></div>
-		  <div id="network_bonus_calculated">Network Bonus<input  value="$5"><input value="$5"></div>
-		  <div id="page_view_calculated">Page View<input  value="$5"><input value="$5"></div>
-		  <div id="peer_vote_calculated">Peer Vote<input  value="$5"><input value="$5"></div>
-		  <div id="pin_to_pinterest_calculated">Pin to Pinterest<input  value="$5"><input value="$5"></div>
-		  <div id="pinterest_follow_calculated">Pinterest Follow<input  value="$5"><input value="$5"></div>
-		  <div id="prize_entries_calculated">Prize Entries<input  value="$5"><input value="$5"></div>
-		  <div id="puzzle_piece_calculated">Puzzle Piece<input  value="$5"><input value="$5"></div>
-		  <div id="referred_signup_calculated">Referred Signup<input  value="$5"><input value="$5"></div>
-		  <div id="referred_visit_calculated">Referred Visit<input  value="$5"><input value="$5"></div>
-		  <div id="registration_calculated">Registration<input  value="$5"><input value="$5"></div>
-		  <div id="reminder_optin_calculated">Reminder Optin<input  value="$5"><input value="$5"></div>
-		  <div id="poll_survey_calculated">Poll Survey<input value="$5"><input value="$5"></div>
-		  <div id="tumblr_follow_calculated">Tumblr Follow<input  value="$5"><input value="$5"></div>
-		  <div id="twitter_follow_calculated">Twitter Follow<input  value="$5"><input value="$5"></div>
-		  <div id="twitter_share_calculated">Twitter Share<input  value="$5"><input value="$5"></div>
-		  <div id="uploaded_content_calculated">Uploaded Content<input  value="$5"><input value="$5"></div>
-		  <div id="uploaded_image_calculated">Uploaded Image<input  value="$5"><input value="$5"></div>
-		  <div id="uploaded_sound_calculated">Uploaded Sound<input  value="$5"><input value="$5"></div>
-		  <div id="uploaded_story_calculated">Uploaded Story<input  value="$5"><input value="$5"></div>
-		  <div id="uploaded_video_calculated">Uploaded Video<input  value="$5"><input value="$5"></div>
-		  <div id="visiting_user_session_calculated">Visiting User Session<input  value="$5"><input value="$5"></div>
-		  <div id="watch_video_calculated">Watch Video<input  value="$5"><input value="$5"></div>
-		  <div id="write_in_entry_calculated">Wrtie in Entry<input  value="$5"><input value="$5"></div>
-		  <p>Total Value<input id="total_roi"><br>
+
+		  <div id="click_through_calculated">
+			  Click Through
+			  <input class="average_engagement_percentage" type="number" value="12.6">
+			  X
+			  <input class="participants_per_action" type="number"  value="10000">
+			  X
+			  <input class="value_per_action" type="number"  value="5">
+			  =
+			  <input class="total_value_per_action" type="number"  value="50000">
+		  </div>
+
+		  <div id="comment_calculated">
+			  Comment
+			  <input class="average_engagement_percentage" type="number" value="35.52">
+			  X
+			  <input class="participants_per_action" type="number"   value="10000">
+			  X
+			  <input class="value_per_action" type="number"  value="5">
+			  =
+			  <input class="total_value_per_action" type="number"  value="50000">
+		  </div>
+
+		  <div id="facebook_tell_calculated">
+			  Facebook Tell
+			  <input class="average_engagement_percentage" type="number" value="21.36">
+			  X
+			  <input class="participants_per_action" type="number"   value="10000">
+			  X
+			  <input class="value_per_action" type="number"  value="5"
+			  =
+			  <input class="total_value_per_action" type="number"  value="50000">
+		  </div>
+
+		  <div id="hashtag_calculated">
+			  Hashtag
+			  <input class="average_engagement_percentage" type="number" value="7.68">
+			  X
+			  <input class="participants_per_action" type="number"   value="10000">
+			  X
+			  <input class="value_per_action" type="number"  value="5">
+			  =
+			  <input class="total_value_per_action" type="number"  value="50000">
+		  </div>
+
+		  <div id="instagram_follow_calculated">
+			  Instagram Follow
+			  <input class="average_engagement_percentage" type="number" value="7.20">
+			  X
+			  <input class="participants_per_action" type="number"  value="10000">
+			  X
+			  <input class="value_per_action" type="number"  value="5">
+			  =
+			  <input class="total_value_per_action" type="number"  value="50000">
+		  </div>
+
+		  <div id="facebook_like_calculated">
+			  Facebook Likes
+			  <input class="average_engagement_percentage" type="number" value="65.16">
+			  X
+			  <input class="participants_per_action" type="number"  value="10000">
+			  X
+			  <input class="value_per_action" type="number"  value="5">
+			  =
+			  <input class="total_value_per_action" type="number"  value="50000">
+		  </div>
+
+      <div id="mailing_list_calculated">
+	      Mailing List
+	      <input class="average_engagement_percentage" type="number" value="74.8">
+	      X
+	      <input class="participants_per_action" type="number"   value="10000">
+	      X
+	      <input class="value_per_action" type="number"  value="5">
+	      =
+	      <input class="total_value_per_action" type="number"  value="50000">
+      </div>
+
+		  <div id="pinterest_follow_calculated">
+			  Pinterest Follow
+			  <input class="average_engagement_percentage" type="number" value="24.36">
+			  X
+			  <input class="participants_per_action" type="number"   value="10000">
+			  X
+			  <input class="value_per_action" type="number"  value="5">
+			  =
+			  <input class="total_value_per_action" type="number"  value="50000">
+		  </div>
+
+		  <div id="puzzle_piece_calculated">
+			  Puzzle Piece
+			  <input class="average_engagement_percentage" type="number" value="67.32">
+			  X
+			  <input class="participants_per_action" type="number"   value="10000">
+			  X
+			  <input class="value_per_action" type="number"  value="5">
+			  =
+			  <input class="total_value_per_action" type="number"  value="50000">
+		  </div>
+
+		  <div id="poll_survey_calculated">
+			  Poll Survey
+			  <input class="average_engagement_percentage" type="number" value="69.36">
+			  X
+			  <input class="participants_per_action" type="number"  value="10000">
+			  X
+			  <input class="value_per_action" type="number"  value="5">
+			  =
+			  <input class="total_value_per_action" type="number"  value="50000">
+		  </div>
+
+		  <div id="tumblr_follow_calculated">
+			  Tumblr Follow
+			  <input class="average_engagement_percentage" type="number" value="2.52">
+			  X
+			  <input class="participants_per_action" type="number"   value="10000">
+			  X
+			  <input class="value_per_action" type="number"  value="5">
+			  =
+			  <input class="total_value_per_action" type="number"  value="50000">
+		  </div>
+
+		  <div id="twitter_follow_calculated">
+			  Twitter Follow
+			  <input class="average_engagement_percentage" type="number" value="15.83">
+			  X
+			  <input class="participants_per_action" type="number"   value="10000">
+			  X
+			  <input class="value_per_action" type="number"  value="5">
+			  =
+			  <input class="total_value_per_action" type="number"  value="50000">
+		  </div>
+
+		  <div id="twitter_share_calculated">
+			  Twitter Share
+			  <input class="average_engagement_percentage" type="number" value="7.31">
+			  X
+			  <input class="participants_per_action" type="number"   value="10000">
+			  X
+			  <input class="value_per_action" type="number"  value="5">
+			  =
+			  <input class="total_value_per_action" type="number"  value="50000">
+		  </div>
+
+		  <div id="watch_video_calculated">
+			  Watch Video
+			  <input class="average_engagement_percentage" type="number" value="25.32">
+			  X
+			  <input class="participants_per_action" type="number"   value="10000">
+			  X
+			  <input class="value_per_action" type="number"  value="5">
+			  =
+			  <input class="total_value_per_action" type="number"  value="50000">
+		  </div>
+
+
+		  <p>Total Value<input type="number"  style="width: 100px;" id="total_roi" value="200000"><br>
+
+
   </div>
 </div>

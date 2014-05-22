@@ -47,19 +47,36 @@
 	width: 217px;
 }
 
+#roi_per_action_container {
+	width: 450px;
+}
+
+#roi_per_action_container div {
+	display: none;
+	width: 400px;
+}
+
 #actions_container, #roi_per_action_container, #middle_container {
 	text-align: center;
 }
 
-#actions_container div, #roi_per_action_container div {
+#actions_container div {
 	display: none;
-	width: 260px;
+	width: 200px;
 }
 
-div#click_through_defined, div#facebook_likes_defined, div#instagram_follow_defined, div#poll_survey_defined, div#code_redemption_defined {
+div#click_through_defined, div#facebook_like_defined, div#instagram_follow_defined, div#poll_survey_defined {
 	display: block;
 } 
 
-div#click_through_calculated, div#calculated, div#instagram_follow_calculated, div#poll_survey_calculated, div#code_redemption_calculated {
+div#click_through_calculated, div#facebook_like_calculated, div#instagram_follow_calculated, div#poll_survey_calculated {
 	display: block;
 } 
+
+#actions_container input, #roi_per_action_container input {
+	width: 50px;
+} 
+
+#total_roi {
+	width: 100px;
+}
