@@ -141,5 +141,19 @@ $(document).ready(function(){
 		}
 	}
 
+	$(".value_per_action").each(function(){
+
+		var average_engagement_percentage = parseFloat($(this).parent().find('.average_engagement_percentage').val()),
+				participants_per_action = parseFloat($(this).parent().find('.participants_per_action').val()),
+				value_per_action = parseFloat($(this).parent().find('.value_per_action').val()),
+				val_per_action = ((average_engagement_percentage/100) * participants_per_action * value_per_action).toFixed(2);
+
+		if ($(this).is(":visible")) {
+			$(this).parent().find('.total_value_per_action').val(val_per_action).change();
+		}
+
+	});
+	
+
 
 });
