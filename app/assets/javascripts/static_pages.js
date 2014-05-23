@@ -40,7 +40,7 @@ $(document).ready(function(){
   		total_fb_ad = cpc_fb_ad_value*total_visitors_fb_ad;
 
   	$('#total_cost').val(0);
-  	$('#total_cost').val(parseFloat($('#total_cost').val()) + total_web_ad + total_fb_ad);
+  	$('#total_cost').val((parseFloat($('#total_cost').val()) + total_web_ad + total_fb_ad).toFixed(2));
 	}
 
 	function calculateTotalVisitors() {
@@ -50,27 +50,27 @@ $(document).ready(function(){
 				total_visitors_website = parseFloat($('#total_visitors_website').val()),
 				total_visitors_fb_ad = parseFloat($('#total_visitors_fb_ad').val());
 
-		$('#total_visitors').val(total_visitors_web_ad + total_visitors_emails + total_visitors_website + total_visitors_fb_ad).change();
+		$('#total_visitors').val((total_visitors_web_ad + total_visitors_emails + total_visitors_website + total_visitors_fb_ad).toFixed(2)).change();
 	}
 
 	function calculateVisitors() {
 	// Calculate visitors for each traffic source
-		var visitors_web_ad = $('#visitors_web_ad').val();
-		$('#total_visitors_web_ad').val(visitors_web_ad);
+		var visitors_web_ad = parseFloat($('#visitors_web_ad').val());
+		$('#total_visitors_web_ad').val(visitors_web_ad.toFixed(2));
 
-		var ctr_email = $('#ctr_email').val(),
-				emails = $('#emails').val(),
+		var ctr_email = parseFloat($('#ctr_email').val()),
+				emails = parseFloat($('#emails').val()),
 				total_emails = ctr_email*(emails/100);
 
-  	$('#total_visitors_emails').val(total_emails);
+  	$('#total_visitors_emails').val(total_emails.toFixed(2));
 
-  	var ctr_website = $('#ctr_website').val(),
-				visitors_website = $('#visitors_website').val(),
+  	var ctr_website = parseFloat($('#ctr_website').val()),
+				visitors_website = parseFloat($('#visitors_website').val()),
 				total_website_visitors = ctr_website*(visitors_website/100);
-  	$('#total_visitors_website').val(total_website_visitors);
+  	$('#total_visitors_website').val(total_website_visitors.toFixed(2));
 
-  	var visitors_fb_ad = $('#visitors_fb_ad').val();
-		$('#total_visitors_fb_ad').val(visitors_fb_ad);
+  	var visitors_fb_ad = parseFloat($('#visitors_fb_ad').val());
+		$('#total_visitors_fb_ad').val(visitors_fb_ad.toFixed(2));
 
 
 	}
@@ -87,7 +87,7 @@ $(document).ready(function(){
 				total_participants = parseFloat($('#total_participants').val()),
 				conversion_rate = (total_participants/total_visitors) * 100;
 
-				$('#conversion_rate').val(conversion_rate);
+				$('#conversion_rate').val(conversion_rate.toFixed(2));
 	}
 
 	function conversionRateChange() {
@@ -96,7 +96,7 @@ $(document).ready(function(){
 				conversion_rate = parseFloat($('#conversion_rate').val()),
 				total_participants = total_visitors * (conversion_rate/100);
 
-				$('#total_participants').val(total_participants).change();
+				$('#total_participants').val(total_participants.toFixed(2)).change();
 	}
 
 	function visitorsChange() {
@@ -107,6 +107,7 @@ $(document).ready(function(){
 	$('.average_engagement_percentage').change(actionsCalculation);
 	$('.participants_per_action').change(actionsCalculation);
 	$('.value_per_action').change(actionsCalculation);
+	$('.total_value_per_action').change(actionsCalculation);
 
 	function actionsCalculation() {
 
@@ -114,19 +115,31 @@ $(document).ready(function(){
 				participants = parseFloat($('#total_participants').val()),
 				average_engagement_percentage = parseFloat($(this).parent().find('.average_engagement_percentage').val()),
 				value_per_action = parseFloat($(this).parent().find('.value_per_action').val()),
-				total_value_per_action = parseFloat($(this).parent().find('.total_value_per_action').val());
+				total_value_per_action = parseFloat($(this).parent().find('.total_value_per_action').val()),
+				total_value = 0,
+				val_per_action = ((average_engagement_percentage/100) * participants_per_action * value_per_action).toFixed(2);
+
 
 		if($(this).is('.average_engagement_percentage')) {
-			$(this).parent().find('.participants_per_action').val((average_engagement_percentage/100) * participants);
-			$(this).parent().find('.total_value_per_action').val((average_engagement_percentage/100) * participants_per_action * value_per_action).change();
+			$(this).parent().find('.participants_per_action').val(((average_engagement_percentage/100) * participants).toFixed(2));
+			$(this).parent().find('.total_value_per_action').val(val_per_action).change();
 		}
 		else if($(this).is('.participants_per_action')) {
-			$(this).parent().find('.average_engagement_percentage').val((participants_per_action / participants) * 100);
-			$(this).parent().find('.total_value_per_action').val((average_engagement_percentage/100) * participants_per_action * value_per_action).change();
+			$(this).parent().find('.average_engagement_percentage').val(((participants_per_action / participants) * 100).toFixed(2));
+			$(this).parent().find('.total_value_per_action').val(val_per_action).change();
 		}
 		else if($(this).is('.value_per_action')) {
-			$(this).parent().find('.total_value_per_action').val((average_engagement_percentage/100) * participants_per_action * value_per_action).change();
+			$(this).parent().find('.total_value_per_action').val(val_per_action).change();
+		}
+		else if($(this).is('.total_value_per_action')) {
+					$(".total_value_per_action").each(function(){
+						if ($(this).is(":visible")) {
+							total_value += parseFloat($(this).val());
+						}
+					});
+				$('#total_roi').val(total_value.toFixed(2));
 		}
 	}
+
 
 });
