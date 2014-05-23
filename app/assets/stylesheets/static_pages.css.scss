@@ -12,6 +12,12 @@
 body {
 	font-family: 'open sans',arial,sans-serif;
 	font-weight: lighter;
+	color: #ffffff;
+}
+
+h3 {
+	font-weight: lighter;
+	margin-bottom: 0px;
 }
 
 input {
@@ -19,10 +25,6 @@ input {
 	font-size: 17px;
 	border: none;
 	border-radius: 6px;
-}
-
-p {
-	color: #ffffff;
 }
 
 .container {
@@ -104,12 +106,22 @@ p {
 
 /* End Traffic Sources Section */
 
+/* Conversion Section */
 
 .conversion_sub_container {
-	padding: 1em;
-	width: 150px;
+	width: 170px;
 	display: inline-block;
+	margin: 0px 8px 0px 0px;
 }
+
+.conversion_sub_container input {
+	padding: 9px;
+	width: 150px;
+	font-size: 27px;
+	text-align: center;
+}
+
+/* End Conversion Section */
 
 #roi_per_action_container {
 	width: 450px;

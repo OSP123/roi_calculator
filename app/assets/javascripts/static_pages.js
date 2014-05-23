@@ -55,27 +55,27 @@ $(document).ready(function(){
 				total_visitors_website = parseFloat($('#total_visitors_website').val()),
 				total_visitors_fb_ad = parseFloat($('#total_visitors_fb_ad').val());
 
-		$('#total_visitors').val((total_visitors_web_ad + total_visitors_emails + total_visitors_website + total_visitors_fb_ad).toFixed(2)).change();
+		$('#total_visitors').val((total_visitors_web_ad + total_visitors_emails + total_visitors_website + total_visitors_fb_ad).toFixed(0)).change();
 	}
 
 	function calculateVisitors() {
 	// Calculate visitors for each traffic source
 		var visitors_web_ad = parseFloat($('#visitors_web_ad').val());
-		$('#total_visitors_web_ad').val(visitors_web_ad.toFixed(2));
+		$('#total_visitors_web_ad').val(visitors_web_ad.toFixed(0));
 
 		var ctr_email = parseFloat($('#ctr_email').val()),
 				emails = parseFloat($('#emails').val()),
 				total_emails = ctr_email*(emails/100);
 
-  	$('#total_visitors_emails').val(total_emails.toFixed(2));
+  	$('#total_visitors_emails').val(total_emails.toFixed(0));
 
   	var ctr_website = parseFloat($('#ctr_website').val()),
 				visitors_website = parseFloat($('#visitors_website').val()),
 				total_website_visitors = ctr_website*(visitors_website/100);
-  	$('#total_visitors_website').val(total_website_visitors.toFixed(2));
+  	$('#total_visitors_website').val(total_website_visitors.toFixed(0));
 
   	var visitors_fb_ad = parseFloat($('#visitors_fb_ad').val());
-		$('#total_visitors_fb_ad').val(visitors_fb_ad.toFixed(2));
+		$('#total_visitors_fb_ad').val(visitors_fb_ad.toFixed(0));
 
 
 	}
@@ -104,7 +104,7 @@ $(document).ready(function(){
 				conversion_rate = parseFloat($('#conversion_rate').val()),
 				total_participants = total_visitors * (conversion_rate/100);
 
-				$('#total_participants').val(total_participants.toFixed(2)).change();
+				$('#total_participants').val(total_participants.toFixed(0)).change();
 
 	}
 
