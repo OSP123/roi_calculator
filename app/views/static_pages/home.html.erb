@@ -95,8 +95,15 @@
 	</div>
 	<div id="right_container">
 	 	<div id="roi_per_action_container" class="sub_container">
-	 			<h3>Calculator</h3>
+	 			<h3 style="font-size: 35px;">Calculator</h3>
 
+	 			<div style="display: inline-block;" id="calculator_heading">
+		 			<p>Action</p>
+		 			<p>Participation Rate Per Action</p>
+		 			<p>Participants Per Action</p>
+		 			<p>Value</p>
+		 			<p>Total</p>
+	 			</div>
 			  <div id="click_through_calculated">
 				  <p class="calculation_header">Click Through</p>
 				  <input class="average_engagement_percentage" type="number" value="12.6">
@@ -251,9 +258,9 @@
 				  <input class="total_value_per_action" type="number"  value="50000">
 			  </div>
 
-
-			  <p>Total Value<input type="number"  style="width: 100px;" id="total_roi" value="200000"><br>
-
+			  <div style="display: inline-block;" id="total_value_container">
+			  	<p>Total Value</p><input type="number" id="total_roi" value="200000">
+			  </div>
 		</div>
   </div>
 </div>

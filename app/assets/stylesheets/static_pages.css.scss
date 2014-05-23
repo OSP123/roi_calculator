@@ -44,7 +44,7 @@ input {
 	float: left;
 	background-color: #8cd291;
 	height: 750px;
-	padding-left: 5em;
+	padding-left: 2em;
 	margin-top: 5em;
 }
 
@@ -54,7 +54,7 @@ input {
 }
 
 #right_container {
-	width: 42%;
+	width: 49%;
 	float: right;
 	background-color: #47b850;
 	height: 100%;
@@ -172,17 +172,50 @@ input {
 /* Calculator Section */
 
 #roi_per_action_container {
-	width: 450px;
-	margin-top: 141px;
+	margin-top: 5em;
+	padding: 1em;
+}
+
+#roi_per_action_container div#calculator_heading {
+	display: inline-block;
+	margin: 0px;
+}
+
+#calculator_heading p {
+	display: inline-block;
+	width: 70px;
+	font-size: 12px;
+}
+
+#calculator_heading p:first-child {
+	margin-left: 2.5em;
+}
+
+#calculator_heading p:nth-child(2) {
+	margin-left: 3.5em;
+}
+
+#calculator_heading p:nth-child(3) {
+	margin-left: 2em;
+}
+
+#calculator_heading p:nth-child(4) {
+	margin-left: 3.8em;
+}
+
+#calculator_heading p:nth-child(5) {
+	margin-left: 1.5em;
 }
 
 #roi_per_action_container input {
 	background: none;
 	color: #ffffff;
+	font-size: 13px;
 }
 
 #roi_per_action_container div {
 	display: none;
+	margin-bottom: 1em;
 }
 
 p.calculation_header {
@@ -192,15 +225,44 @@ p.calculation_header {
 }
 
 #roi_per_action_container input.average_engagement_percentage {
-	font-size: 14px;
 	margin-left: 1em;
 	width: 57px;
 }
 
 #roi_per_action_container input.participants_per_action {
-	width: 100px;
+	width: 90px;
+	margin-left: 23px;
 }
 
+#roi_per_action_container input.value_per_action {
+	width: 30px;
+	margin-left: 23px;
+}
+
+#roi_per_action_container input.total_value_per_action {
+	width: 80px;
+	margin-left: 23px;
+}
+
+#total_value_container input, #total_value_container p {
+	display: inline-block;
+}
+
+#total_value_container {
+	background: white;
+	color: #40B549;
+	width: 89%;
+	border-radius: 6px;
+	padding-left: 1em;
+	font-size: 29px;
+}
+
+#total_value_container input {
+	font-size: 29px;
+	color: #40B549;
+	margin-left: 1em;
+	width: 300px;
+}
 
 /* End Calculator Section */
 
@@ -226,10 +288,6 @@ div#click_through_defined, div#facebook_like_defined, div#instagram_follow_defin
 
 div#click_through_calculated, div#facebook_like_calculated, div#instagram_follow_calculated, div#poll_survey_calculated, div#twitter_share_calculated, div#watch_video_calculated {
 	display: block;
-} 
-
-#actions_container input, #roi_per_action_container input {
-	width: 50px;
 } 
 
 #total_roi {

@@ -95,7 +95,7 @@ $(document).ready(function(){
 
 				$('#conversion_rate').val(conversion_rate.toFixed(2));
 
-				$('.participants_per_action').val((total_participants * (average_engagement_percentage/100)).toFixed(2)).change;
+				$('.participants_per_action').val((total_participants * (average_engagement_percentage/100)).toFixed(0)).change;
 	}
 
 	function conversionRateChange() {
@@ -124,7 +124,7 @@ $(document).ready(function(){
 
 
 		if($(this).is('.average_engagement_percentage')) {
-			$(this).parent().find('.participants_per_action').val(((average_engagement_percentage/100) * participants).toFixed(2));
+			$(this).parent().find('.participants_per_action').val(((average_engagement_percentage/100) * participants).toFixed(0));
 			$(this).parent().find('.total_value_per_action').val(val_per_action).change();
 		}
 		else if($(this).is('.participants_per_action')) {
