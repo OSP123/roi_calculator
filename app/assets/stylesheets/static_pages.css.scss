@@ -2,6 +2,22 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+body {
+	font-family: arial;
+	font-weight: lighter;
+}
+
+input {
+	color: #8c969c;
+	font-size: 17px;
+	font-weight: 100;
+	border: none;
+	border-radius: 6px;
+}
+
+p {
+	color: #ffffff;
+}
 
 .container {
 	width: 1170px;
@@ -13,11 +29,21 @@
 	background-color: #8cd291;
 }
 
+.sub_container {
+	color: #ffffff;
+}
+
 #left_container {
-	width: 60%;
+	width: 49%;
 	float: left;
 	background-color: #8cd291;
 	height: 100%;
+	padding-left: 5em;
+}
+
+.dollar_sign {
+	position: relative;
+	left: 20px;
 }
 
 #right_container {
@@ -27,9 +53,12 @@
 	height: 100%;
 }
 
+/* Traffic Sources Section */
+
 .container #traffic_sources_container {
 	border: none;
 	text-align: left;
+	color: #ffffff;
 }
 
 
@@ -38,6 +67,34 @@
 	text-align: center;
 	display: inline-block;
 }
+
+.container #traffic_sources_container .traffic_source input {
+	
+	padding: 5px;
+	width: 106px;
+}
+
+#total_cost_container {
+	background-color: #47b850;
+	display: inline-block;
+	width: 92%;
+	height: 41px;
+	margin-top: 9px;
+	border-radius: 6px;	
+}
+
+#total_cost_container p {
+	display: inline-block;
+}
+
+#total_cost_container input {
+	background: none;
+	color: #ffffff;
+	display: inline-block;
+}
+
+/* End Traffic Sources Section */
+
 
 .conversion_sub_container {
 	padding: 1em;
@@ -62,6 +119,7 @@
 	width: 160px;
 	min-height: 40px;
 	display: inline-block;
+	color: #ffffff;
 }
 
 #action_select_main {

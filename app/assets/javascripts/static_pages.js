@@ -30,6 +30,11 @@ $(document).ready(function(){
 	$('#total_participants').change(participantsChange);
 	$('#conversion_rate').change(conversionRateChange);
 
+	$('.average_engagement_percentage').change(actionsCalculation);
+	$('.participants_per_action').change(actionsCalculation);
+	$('.value_per_action').change(actionsCalculation);
+	$('.total_value_per_action').change(actionsCalculation);
+
   function calculateCost() {
   	var
   		cpc_web_ad_value = parseFloat($('#cpc_web_ad').val()),
@@ -85,9 +90,12 @@ $(document).ready(function(){
 	// Calculate Total Participants
 		var total_visitors = parseFloat($('#total_visitors').val()),
 				total_participants = parseFloat($('#total_participants').val()),
-				conversion_rate = (total_participants/total_visitors) * 100;
+				conversion_rate = (total_participants/total_visitors) * 100,
+				average_engagement_percentage = parseFloat($('.average_engagement_percentage').parent().find('.average_engagement_percentage').val());
 
 				$('#conversion_rate').val(conversion_rate.toFixed(2));
+
+				$('.participants_per_action').val((total_participants * (average_engagement_percentage/100)).toFixed(2)).change;
 	}
 
 	function conversionRateChange() {
@@ -97,17 +105,12 @@ $(document).ready(function(){
 				total_participants = total_visitors * (conversion_rate/100);
 
 				$('#total_participants').val(total_participants.toFixed(2)).change();
+
 	}
 
 	function visitorsChange() {
 		conversionRateChange();
 	}
-
-
-	$('.average_engagement_percentage').change(actionsCalculation);
-	$('.participants_per_action').change(actionsCalculation);
-	$('.value_per_action').change(actionsCalculation);
-	$('.total_value_per_action').change(actionsCalculation);
 
 	function actionsCalculation() {
 
