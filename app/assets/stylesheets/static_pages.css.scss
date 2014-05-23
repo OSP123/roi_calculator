@@ -2,15 +2,21 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url('http://themes.googleusercontent.com/static/fonts/opensans/v5/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff') format('woff');
+}
+
 body {
-	font-family: arial;
+	font-family: 'open sans',arial,sans-serif;
 	font-weight: lighter;
 }
 
 input {
 	color: #8c969c;
 	font-size: 17px;
-	font-weight: 100;
 	border: none;
 	border-radius: 6px;
 }
@@ -59,8 +65,8 @@ p {
 	border: none;
 	text-align: left;
 	color: #ffffff;
+	width: 532px;
 }
-
 
 .container #traffic_sources_container .traffic_source {
 	width: 130px;
@@ -76,11 +82,14 @@ p {
 
 #total_cost_container {
 	background-color: #47b850;
-	display: inline-block;
-	width: 92%;
-	height: 41px;
+	height: 51px;
 	margin-top: 9px;
 	border-radius: 6px;	
+}
+
+#total_cost_container div {
+	display: inline-block;
+	margin-left: 12em;
 }
 
 #total_cost_container p {
@@ -111,7 +120,7 @@ p {
 	width: 400px;
 }
 
-#roi_per_action_container, #middle_container {
+#roi_per_action_container {
 	text-align: center;
 }
 
