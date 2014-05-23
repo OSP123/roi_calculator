@@ -7,44 +7,42 @@
 	width: 1170px;
 	margin-left: auto;
 	margin-right: auto;
+	height: 680px;
+	margin-top: 4em;
+	margin-bottom: 4em;
+	background-color: #8cd291;
+}
+
+#left_container {
+	width: 60%;
+	float: left;
+	background-color: #8cd291;
+	height: 100%;
+}
+
+#right_container {
+	width: 39%;
+	float: right;
+	background-color: #47b850;
+	height: 100%;
 }
 
 .container #traffic_sources_container {
-	width: 200px;
-	float: left;
 	border: none;
-	text-align: center;
+	text-align: left;
 }
 
 
 .container #traffic_sources_container .traffic_source {
 	width: 130px;
 	text-align: center;
-	border: solid 1px;
-	margin: 1em;
-	padding: 1em;
+	display: inline-block;
 }
 
 .conversion_sub_container {
-	border: solid 1px;
 	padding: 1em;
-	margin: 1em;
 	width: 150px;
-}
-
-.sub_container {
-	padding: 1em;
-	margin: 1em;
-	width: 200px;
-	float: left;
-}
-
-#action_container {
-	width: 250px;
-}
-
-#middle_container {
-	width: 217px;
+	display: inline-block;
 }
 
 #roi_per_action_container {
@@ -56,20 +54,35 @@
 	width: 400px;
 }
 
-#actions_container, #roi_per_action_container, #middle_container {
+#roi_per_action_container, #middle_container {
 	text-align: center;
 }
 
-#actions_container div {
-	display: none;
-	width: 200px;
+.action_select_container {
+	width: 160px;
+	min-height: 40px;
+	display: inline-block;
 }
 
-div#click_through_defined, div#facebook_like_defined, div#instagram_follow_defined, div#poll_survey_defined {
+#action_select_main {
+	width: 330px;
+	display: inline-block;
+}
+
+#select_container {
+	width: 230px;
+	display: inline-block;
+}
+
+.action_select_container div{
+	display: none;
+}
+
+div#click_through_defined, div#facebook_like_defined, div#instagram_follow_defined, div#poll_survey_defined, div#twitter_share_defined, div#watch_video_defined {
 	display: block;
 } 
 
-div#click_through_calculated, div#facebook_like_calculated, div#instagram_follow_calculated, div#poll_survey_calculated {
+div#click_through_calculated, div#facebook_like_calculated, div#instagram_follow_calculated, div#poll_survey_calculated, div#twitter_share_calculated, div#watch_video_calculated {
 	display: block;
 } 
 
