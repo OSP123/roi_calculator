@@ -9,7 +9,7 @@
   src: local('Open Sans'), local('OpenSans'), url('http://themes.googleusercontent.com/static/fonts/opensans/v5/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff') format('woff');
 }
 
-body {
+body, select {
 	font-family: 'open sans',arial,sans-serif;
 	font-weight: lighter;
 	color: #ffffff;
@@ -31,9 +31,7 @@ input {
 	width: 1170px;
 	margin-left: auto;
 	margin-right: auto;
-	height: 680px;
-	margin-top: 4em;
-	margin-bottom: 4em;
+	height: 830px;
 	background-color: #8cd291;
 }
 
@@ -42,11 +40,12 @@ input {
 }
 
 #left_container {
-	width: 49%;
+	width: 48%;
 	float: left;
 	background-color: #8cd291;
-	height: 100%;
+	height: 750px;
 	padding-left: 5em;
+	margin-top: 5em;
 }
 
 .dollar_sign {
@@ -55,7 +54,7 @@ input {
 }
 
 #right_container {
-	width: 39%;
+	width: 42%;
 	float: right;
 	background-color: #47b850;
 	height: 100%;
@@ -123,33 +122,97 @@ input {
 
 /* End Conversion Section */
 
+/* Select Tag Section */
+
+#selection_container {
+	width: 245px;
+	display: inline-block;
+}
+
+#select_container {
+	 width: 170px;
+   height: 34px;
+   overflow: hidden;
+   border: 1px solid #ffffff;
+   border-radius: 24px;
+   min-width: 140px;
+   background: url('arrow.png') no-repeat right;
+   display: inline-block;
+   padding-left: 10px;
+}
+
+#select_container #actions_drop_down {
+   background: transparent;
+   width: 268px;
+   padding: 5px;
+   font-size: 16px;
+   line-height: 1;
+   border: 0;
+   border-radius: 0;
+   height: 34px;
+   -webkit-appearance: none;
+   color: #fffff;
+}
+
+#add_action {
+	display: inline-block;
+	background: white;
+	border: solid 1px white;
+	border-radius: 9px;
+	font-size: 20px;
+	position: relative;
+	bottom: 11px;
+	color: #40B549;
+	left: 3px;
+}
+
+
+/* End Select Tag Section */
+
+/* Calculator Section */
+
 #roi_per_action_container {
 	width: 450px;
+	margin-top: 141px;
+}
+
+#roi_per_action_container input {
+	background: none;
+	color: #ffffff;
 }
 
 #roi_per_action_container div {
 	display: none;
-	width: 400px;
 }
 
-#roi_per_action_container {
-	text-align: center;
+p.calculation_header {
+	margin: 0px;
+	display: inline-block;
+	min-width: 130px;
 }
+
+#roi_per_action_container input.average_engagement_percentage {
+	font-size: 14px;
+	margin-left: 1em;
+	width: 57px;
+}
+
+#roi_per_action_container input.participants_per_action {
+	width: 100px;
+}
+
+
+/* End Calculator Section */
 
 .action_select_container {
-	width: 160px;
+	width: 150px;
 	min-height: 40px;
 	display: inline-block;
 	color: #ffffff;
 }
 
 #action_select_main {
-	width: 330px;
-	display: inline-block;
-}
-
-#select_container {
-	width: 230px;
+	width: 310px;
 	display: inline-block;
 }
 
