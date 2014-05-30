@@ -20,6 +20,10 @@ h3 {
 	margin-bottom: 0px;
 }
 
+img {
+	height: 30px;
+}
+
 input {
 	color: #8c969c;
 	font-size: 14px;
@@ -28,11 +32,11 @@ input {
 }
 
 .container {
-	width: 1250px;
+	width: 1400px;
 	margin-left: auto;
 	margin-right: auto;
 	height: 830px;
-	background-color: #8cd291;
+	background-color: #FF3200;
 }
 
 .sub_container {
@@ -40,33 +44,55 @@ input {
 }
 
 #left_container {
-	width: 45%;
+	width: 55%;
 	float: left;
-	background-color: #8cd291;
+	background-color: #FF3200;
 	height: 750px;
 	padding-left: 1em;
 	margin-top: 5em;
 }
 
 #right_container {
-	width: 51%;
+	width: 43%;
 	float: right;
-	background-color: #47b850;
+	background-color: #1BBC98;
 	height: 100%;
 }
 
 /* Traffic Sources Section */
 
+.container #traffic_sources_container {
+	border: none;
+	text-align: left;
+	color: #ffffff;
+	width: 100%;
+
+	p {
+		margin: 0;
+	}
+
+	.traffic_source {
+		width: 180px;
+		display: inline-block;
+		margin: 0px 7px 0px 0px;
+
+ 		input {
+			padding: 5px 0px 5px 0px;
+			width: 97px;
+		}
+	}
+}
+
 .traffic_source_input_container {
 	display: inline-block;
-	width: 136px;
+	width: 176px;
 	background: white;
 	border-radius: 6px;
 	color: #8c969c;
 	margin: 10px 0px 0px 0px;
+	padding-left: 4px;
 
 	p {
-		margin: 0;
 		display: inline-block;
 		text-align: left;
 	}
@@ -78,33 +104,19 @@ input {
 	min-width: 54px;
 }
 
-.container #traffic_sources_container {
-	border: none;
-	text-align: left;
-	color: #ffffff;
-	width: 100%;
-
-	.traffic_source {
-		width: 130px;
-		display: inline-block;
-
- 		input {
-			padding: 5px 0px 5px 0px;
-			width: 37px;
-		}
-	}
-}
-
 #total_cost_container {
-	background-color: #47b850;
-	height: 51px;
+	background-color: #3B413F;
 	margin-top: 9px;
 	border-radius: 6px;	
+	padding: 30px;
+	font-size: 29px;
+	width: 90%;
 }
 
 #total_cost_container div {
-	display: inline-block;
-	margin-left: 12em;
+	display: block;
+	width: 430px;
+	margin-left: 209px;
 }
 
 #total_cost_container p {
@@ -115,6 +127,8 @@ input {
 	background: none;
 	color: #ffffff;
 	display: inline-block;
+	font-size: 29px;
+	width: 190px;
 }
 
 /* End Traffic Sources Section */
