@@ -22,13 +22,13 @@ h3 {
 
 input {
 	color: #8c969c;
-	font-size: 17px;
+	font-size: 14px;
 	border: none;
 	border-radius: 6px;
 }
 
 .container {
-	width: 1170px;
+	width: 1250px;
 	margin-left: auto;
 	margin-right: auto;
 	height: 830px;
@@ -40,21 +40,16 @@ input {
 }
 
 #left_container {
-	width: 48%;
+	width: 45%;
 	float: left;
 	background-color: #8cd291;
 	height: 750px;
-	padding-left: 2em;
+	padding-left: 1em;
 	margin-top: 5em;
 }
 
-.dollar_sign {
-	position: relative;
-	left: 20px;
-}
-
 #right_container {
-	width: 49%;
+	width: 51%;
 	float: right;
 	background-color: #47b850;
 	height: 100%;
@@ -62,23 +57,42 @@ input {
 
 /* Traffic Sources Section */
 
+.traffic_source_input_container {
+	display: inline-block;
+	width: 136px;
+	background: white;
+	border-radius: 6px;
+	color: #8c969c;
+	margin: 10px 0px 0px 0px;
+
+	p {
+		margin: 0;
+		display: inline-block;
+		text-align: left;
+	}
+}
+
+.traffic_source_label {
+	font-size: 9px;
+	padding: 0;
+	min-width: 54px;
+}
+
 .container #traffic_sources_container {
 	border: none;
 	text-align: left;
 	color: #ffffff;
-	width: 532px;
-}
+	width: 100%;
 
-.container #traffic_sources_container .traffic_source {
-	width: 130px;
-	text-align: center;
-	display: inline-block;
-}
+	.traffic_source {
+		width: 130px;
+		display: inline-block;
 
-.container #traffic_sources_container .traffic_source input {
-	
-	padding: 5px;
-	width: 106px;
+ 		input {
+			padding: 5px 0px 5px 0px;
+			width: 37px;
+		}
+	}
 }
 
 #total_cost_container {
