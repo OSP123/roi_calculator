@@ -105,6 +105,7 @@ $(document).ready(function(){
 			$('#conversion_rate').val(conversion_rate.toFixed(2));
 
 			$('.participants_per_action').val((total_participants * (average_engagement_percentage/100)).toFixed(0)).change;
+			viralVisitors();
 	}
 
 
@@ -165,6 +166,25 @@ $(document).ready(function(){
 		}
 
 	});
+
+
+	function viralVisitors() {
+		var total_participants = parseFloat($('#total_participants').val()),
+				viral_conversion_rate = parseFloat($('#viral_conversion_rate').val()),
+				viral_visitors = total_participants * (viral_conversion_rate/100);
+				
+				$('#viral_visitors').val(viral_visitors.toFixed(0)).change();
+	}
+
+	function viralParticipants() {
+		
+	}
+
+	function viralConversionRate() {
+		var total_participants = parseFloat($('#total_participants').val()),
+				viral_conversion_rate = parseFloat($('#viral_conversion_rate').val()),
+				viral_visitors = total_participants * (viral_conversion_rate/100);
+	}
 	
 
 

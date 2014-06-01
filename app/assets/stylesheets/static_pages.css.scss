@@ -12,20 +12,22 @@
 body, select {
 	font-family: 'open sans',arial,sans-serif;
 	font-weight: lighter;
-	color: #ffffff;
+	color: #3B413F;
 }
 
 h3 {
 	font-weight: lighter;
-	margin-bottom: 0px;
+	margin: 0;
 }
 
 img {
 	height: 30px;
+	display: inline-block;
+	padding: 2.5em;
 }
 
 input {
-	color: #8c969c;
+	color: #f7581e;
 	font-size: 14px;
 	border: none;
 	border-radius: 6px;
@@ -36,27 +38,57 @@ input {
 	margin-left: auto;
 	margin-right: auto;
 	height: 830px;
-	background-color: #FF3200;
 }
 
-.sub_container {
-	color: #ffffff;
+.top_container {
+	background: #efefef;
+	height: 110px;
 }
+
+/* Begin Top Container CSS */
+
+#color_box_container {
+	display: inline-block;
+	float: right;
+}
+
+.color_box {
+	height: 20px;
+	width: 290px;
+	display: inline-block;
+	margin: 0;
+	vertical-align: top;
+}
+
+#color_box_left {
+	background-color: #505654;
+	margin-right: -4px;
+}
+
+#color_box_middle {
+	background-color: #30c4a2;
+	margin-right: -4px;
+}
+
+#color_box_right {
+	background-color: #f7581e;
+}
+
+/* End Top Container CSS */
 
 #left_container {
 	width: 55%;
 	float: left;
-	background-color: #FF3200;
+	background-color: #efefef;
 	height: 750px;
 	padding-left: 1em;
-	margin-top: 5em;
 }
 
 #right_container {
 	width: 43%;
 	float: right;
-	background-color: #1BBC98;
-	height: 100%;
+	background-color: #efefef;
+	height: 750px;
 }
 
 /* Traffic Sources Section */
@@ -64,7 +96,6 @@ input {
 .container #traffic_sources_container {
 	border: none;
 	text-align: left;
-	color: #ffffff;
 	width: 100%;
 
 	p {
@@ -83,12 +114,11 @@ input {
 	}
 }
 
-.traffic_source_input_container {
+.traffic_source_input_container, .viral_conversion_sub_container {
 	display: inline-block;
 	width: 176px;
 	background: white;
 	border-radius: 6px;
-	color: #8c969c;
 	margin: 10px 0px 0px 0px;
 	padding-left: 4px;
 
@@ -98,7 +128,7 @@ input {
 	}
 }
 
-.traffic_source_label {
+.traffic_source_label, .viral_conversion_label {
 	font-size: 9px;
 	padding: 0;
 	min-width: 54px;
@@ -121,11 +151,11 @@ input {
 
 #total_cost_container p {
 	display: inline-block;
+	color: #f7581e;
 }
 
 #total_cost_container input {
 	background: none;
-	color: #ffffff;
 	display: inline-block;
 	font-size: 29px;
 	width: 190px;
@@ -149,6 +179,20 @@ input {
 }
 
 /* End Conversion Section */
+
+/* Viral Conversion Section */
+
+.viral_conversion_input {
+	padding: 5px 0px 5px 0px;
+	width: 97px;
+}
+
+.viral_conversion_sub_container {
+	width: 216px;
+}
+
+
+/* End Viral Conversion Section */
 
 /* Select Tag Section */
 
@@ -190,7 +234,7 @@ input {
 	font-size: 20px;
 	position: relative;
 	bottom: 11px;
-	color: #40B549;
+	color: #30c4a2;
 	left: 3px;
 }
 
@@ -200,7 +244,6 @@ input {
 /* Calculator Section */
 
 #roi_per_action_container {
-	margin-top: 5em;
 	padding: 1em;
 }
 
@@ -237,7 +280,6 @@ input {
 
 #roi_per_action_container input {
 	background: none;
-	color: #ffffff;
 	font-size: 13px;
 }
 
@@ -274,6 +316,7 @@ p.calculation_header {
 
 #total_value_container input, #total_value_container p {
 	display: inline-block;
+	color: #30c4a2;
 }
 
 #total_value_container {
@@ -287,7 +330,6 @@ p.calculation_header {
 
 #total_value_container input {
 	font-size: 29px;
-	color: #40B549;
 	margin-left: 1em;
 	width: 300px;
 }
@@ -298,7 +340,6 @@ p.calculation_header {
 	width: 150px;
 	min-height: 40px;
 	display: inline-block;
-	color: #ffffff;
 }
 
 #action_select_main {
