@@ -54,6 +54,8 @@ $(document).ready(function(){
 
 	$('#viral_participants').change(viralParticipants);
 
+	$('#after_vcr_participants').change(actionsCalculation);
+
   function calculateCost() {
   	var
   		cpc_web_ad_value = parseFloat($('#cpc_web_ad').val()),
@@ -138,6 +140,7 @@ $(document).ready(function(){
 				val_per_action = (participants_per_action * value_per_action).toFixed(2);
 
 
+
 		if($(this).is('.average_engagement_percentage')) {
 			$(this).parent().find('.participants_per_action').val(((average_engagement_percentage/100) * participants).toFixed(0));
 			$(this).parent().find('.total_value_per_action').val(val_per_action).change();
@@ -183,15 +186,16 @@ $(document).ready(function(){
 
 	function viralVisitors() {
 		var viral_visitors = parseFloat($('#viral_visitors').val()),
-				viral_conversion_rate = parseFloat($('#viral_conversion_rate').val()),
-				viral_participants = (viral_conversion_rate/100) * viral_visitors;
+				conversion_rate = parseFloat($('#conversion_rate').val()),
+				viral_participants = (conversion_rate/100) * viral_visitors;
 
 		$('#viral_participants').val(viral_participants.toFixed(0));
 		afterVcrVisitors();
 	}
 
+
 	function viralConversionRate() {
-		viralVisitors();
+		viralVisitorsFromTotalParticipants();
 	}
 
 	function viralParticipants() {
@@ -207,7 +211,7 @@ $(document).ready(function(){
 				total_visitors = parseFloat($('#total_visitors').val()),
 				after_vcr_visitors = viral_visitors + total_visitors;
 
-		$('#after_vcr_visitors').val(after_vcr_visitors.toFixed(2));
+		$('#after_vcr_visitors').val(after_vcr_visitors.toFixed(0));
 	}
 
 	function afterVcrParticipants() {
@@ -216,9 +220,13 @@ $(document).ready(function(){
 				after_vcr_participants = viral_participants + total_participants,
 				average_engagement_percentage = parseFloat($('.average_engagement_percentage').parent().find('.average_engagement_percentage').val());
 
-		$('#after_vcr_participants').val(after_vcr_participants.toFixed(2));
+		$('#after_vcr_participants').val(after_vcr_participants.toFixed(0)).change();
+		participantsPerAction();
 
-		$('.participants_per_action').val((after_vcr_participants * (average_engagement_percentage/100)).toFixed(0)).change;
+	}
+
+	function participantsPerAction() {
+		$('.average_engagement_percentage').change();
 	}
 	
 
