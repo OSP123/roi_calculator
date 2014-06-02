@@ -17,7 +17,8 @@ body, select {
 
 h3 {
 	font-weight: lighter;
-	margin: 0;
+	margin: 10px 0 10px 0;
+	font-size: 35px;
 }
 
 img {
@@ -37,7 +38,6 @@ input {
 	width: 1400px;
 	margin-left: auto;
 	margin-right: auto;
-	height: 830px;
 }
 
 .top_container {
@@ -80,7 +80,6 @@ input {
 	width: 55%;
 	float: left;
 	background-color: #efefef;
-	height: 750px;
 	padding-left: 1em;
 }
 
@@ -88,7 +87,6 @@ input {
 	width: 43%;
 	float: right;
 	background-color: #efefef;
-	height: 750px;
 }
 
 /* Traffic Sources Section */
@@ -161,12 +159,26 @@ input {
 	width: 190px;
 }
 
+
+.click_through_percent_container {
+	background-image: url("percent_orange.png");
+	background-repeat: no-repeat;
+	background-position-x: 6em;
+	background-position-y: 0.6em;
+	background-size: 13px;
+}
+
+.container #traffic_sources_container .traffic_source input#ctr_email, .container #traffic_sources_container .traffic_source input#ctr_website {
+	background: transparent;
+	width: 35px;
+}
+
 /* End Traffic Sources Section */
 
 /* Conversion Section */
 
 .conversion_sub_container {
-	width: 170px;
+	width: 190px;
 	display: inline-block;
 	margin: 0px 8px 0px 0px;
 }
@@ -178,6 +190,23 @@ input {
 	text-align: center;
 }
 
+#conversion_rate_percentage_container {
+	background: white;
+	border-radius: 5px;
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	height: 52px;
+	background-image: url('percent_orange.png');
+	background-repeat: no-repeat;
+	background-position-x: 7em;
+	background-position-y: 0.9em;
+}
+
+input#conversion_rate {
+	background: transparent;
+}
+
 /* End Conversion Section */
 
 /* Viral Conversion Section */
@@ -185,6 +214,10 @@ input {
 .viral_conversion_input {
 	padding: 5px 0px 5px 0px;
 	width: 97px;
+}
+
+#viral_conversion_main_container {
+	padding-bottom: 1em;
 }
 
 .viral_conversion_sub_container {
@@ -238,6 +271,9 @@ input {
 	left: 3px;
 }
 
+#actions_container {
+	padding-left: 1em;
+}
 
 /* End Select Tag Section */
 
@@ -271,11 +307,11 @@ input {
 }
 
 #calculator_heading p:nth-child(4) {
-	margin-left: 3.8em;
+	margin-left: 4.8em;
 }
 
 #calculator_heading p:nth-child(5) {
-	margin-left: 1.5em;
+	margin-left: 2.3em;
 }
 
 #roi_per_action_container input {
@@ -297,21 +333,25 @@ p.calculation_header {
 #roi_per_action_container input.average_engagement_percentage {
 	margin-left: 1em;
 	width: 57px;
+	color: #30c4a2;
 }
 
 #roi_per_action_container input.participants_per_action {
 	width: 90px;
 	margin-left: 23px;
+	color: #30c4a2;
 }
 
 #roi_per_action_container input.value_per_action {
-	width: 30px;
+	width: 60px;
 	margin-left: 23px;
+	color: #30c4a2;
 }
 
 #roi_per_action_container input.total_value_per_action {
 	width: 80px;
 	margin-left: 23px;
+	color: #30c4a2;
 }
 
 #total_value_container input, #total_value_container p {
