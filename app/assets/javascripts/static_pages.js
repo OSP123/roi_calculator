@@ -18,6 +18,10 @@ $(document).ready(function(){
 
   $('#visitors_web_ad').change(multipleCostAndVisitors);
 
+  $('#total_visitors_web_ad').change(calculateTotalVisitors);
+
+  $('#total_visitors_fb_ad').change(calculateTotalVisitors);
+
   $('#ctr_email').change(multipleCostAndVisitors);
 
   $('#emails').change(multipleCostAndVisitors);
