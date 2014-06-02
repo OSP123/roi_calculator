@@ -44,6 +44,12 @@ $(document).ready(function(){
 
 	$('.total_value_per_action').change(actionsCalculation);
 
+	$('#viral_visitors').change(viralVisitors);
+
+	$('#viral_conversion_rate').change(viralConversionRate);
+
+	$('#viral_participants').change(viralParticipants);
+
   function calculateCost() {
   	var
   		cpc_web_ad_value = parseFloat($('#cpc_web_ad').val()),
@@ -103,11 +109,11 @@ $(document).ready(function(){
 			average_engagement_percentage = parseFloat($('.average_engagement_percentage').parent().find('.average_engagement_percentage').val());
 
 			$('#conversion_rate').val(conversion_rate.toFixed(2));
+			
+			viralVisitorsFromTotalParticipants();
 
-			$('.participants_per_action').val((total_participants * (average_engagement_percentage/100)).toFixed(0)).change;
-			viralVisitors();
+			afterVcrParticipants();
 	}
-
 
 	function conversionRateChange() {
 	// Calculate Total Participants
@@ -168,22 +174,52 @@ $(document).ready(function(){
 	});
 
 
-	function viralVisitors() {
+	function viralVisitorsFromTotalParticipants() {
 		var total_participants = parseFloat($('#total_participants').val()),
 				viral_conversion_rate = parseFloat($('#viral_conversion_rate').val()),
 				viral_visitors = total_participants * (viral_conversion_rate/100);
 				
-				$('#viral_visitors').val(viral_visitors.toFixed(0)).change();
+		$('#viral_visitors').val(viral_visitors.toFixed(0)).change();
 	}
 
-	function viralParticipants() {
-		
+	function viralVisitors() {
+		var viral_visitors = parseFloat($('#viral_visitors').val()),
+				viral_conversion_rate = parseFloat($('#viral_conversion_rate').val()),
+				viral_participants = (viral_conversion_rate/100) * viral_visitors;
+
+		$('#viral_participants').val(viral_participants.toFixed(0));
+		afterVcrVisitors();
 	}
 
 	function viralConversionRate() {
-		var total_participants = parseFloat($('#total_participants').val()),
-				viral_conversion_rate = parseFloat($('#viral_conversion_rate').val()),
-				viral_visitors = total_participants * (viral_conversion_rate/100);
+		viralVisitors();
+	}
+
+	function viralParticipants() {
+		var viral_participants = parseFloat($('#viral_participants').val()),
+				viral_visitors = parseFloat($('#viral_visitors').val()),
+				viral_conversion_rate = (viral_participants/viral_visitors) * 100;
+
+		$('#viral_conversion_rate').val(viral_conversion_rate.toFixed(2));
+	}
+
+	function afterVcrVisitors() {
+		var viral_visitors = parseFloat($('#viral_visitors').val()),
+				total_visitors = parseFloat($('#total_visitors').val()),
+				after_vcr_visitors = viral_visitors + total_visitors;
+
+		$('#after_vcr_visitors').val(after_vcr_visitors.toFixed(2));
+	}
+
+	function afterVcrParticipants() {
+		var viral_participants = parseFloat($('#viral_participants').val()),
+				total_participants = parseFloat($('#total_participants').val()),
+				after_vcr_participants = viral_participants + total_participants,
+				average_engagement_percentage = parseFloat($('.average_engagement_percentage').parent().find('.average_engagement_percentage').val());
+
+		$('#after_vcr_participants').val(after_vcr_participants.toFixed(2));
+
+		$('.participants_per_action').val((after_vcr_participants * (average_engagement_percentage/100)).toFixed(0)).change;
 	}
 	
 
