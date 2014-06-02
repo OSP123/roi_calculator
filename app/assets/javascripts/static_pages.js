@@ -75,8 +75,6 @@ $(document).ready(function(){
 
 	function calculateVisitors() {
 	// Calculate visitors for each traffic source
-		var visitors_web_ad = parseFloat($('#visitors_web_ad').val());
-		$('#total_visitors_web_ad').val(visitors_web_ad.toFixed(0));
 
 		var ctr_email = parseFloat($('#ctr_email').val()),
 				emails = parseFloat($('#emails').val()),
@@ -89,9 +87,6 @@ $(document).ready(function(){
 				total_website_visitors = ctr_website*(visitors_website/100);
 
   	$('#total_visitors_website').val(total_website_visitors.toFixed(0));
-
-  	var visitors_fb_ad = parseFloat($('#visitors_fb_ad').val());
-		$('#total_visitors_fb_ad').val(visitors_fb_ad.toFixed(0));
 
 	}
 
