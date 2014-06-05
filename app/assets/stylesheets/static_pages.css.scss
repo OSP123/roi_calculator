@@ -133,7 +133,7 @@ input {
 }
 
 #total_cost_container {
-	background-color: #3B413F;
+	background-color: white;
 	margin-top: 9px;
 	border-radius: 6px;	
 	padding: 30px;
@@ -150,6 +150,7 @@ input {
 
 #total_cost_container p {
 	display: inline-block;
+	color: #505654;
 }
 
 #total_cost_container input {
@@ -157,15 +158,14 @@ input {
 	display: inline-block;
 	font-size: 29px;
 	width: 190px;
-	color: white;
+	color: #f7581e;
 }
 
 
 .click_through_percent_container {
 	background-image: url("percent_orange.png");
 	background-repeat: no-repeat;
-	background-position-x: 6em;
-	background-position-y: 0.6em;
+	background-position: 59% 47%;
 	background-size: 13px;
 }
 
@@ -200,8 +200,7 @@ input {
 	height: 52px;
 	background-image: url('percent_orange.png');
 	background-repeat: no-repeat;
-	background-position-x: 7em;
-	background-position-y: 0.9em;
+	background-position: 86% 51%;
 }
 
 input#conversion_rate {
@@ -357,11 +356,11 @@ p.calculation_header {
 
 #total_value_container input, #total_value_container p {
 	display: inline-block;
-	color: #30c4a2;
+	color: white;
 }
 
 #total_value_container {
-	background: white;
+	background: #30c4a2;
 	color: #40B549;
 	width: 89%;
 	border-radius: 6px;
