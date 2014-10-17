@@ -83,6 +83,10 @@ input {
 	margin-right: auto;
 }
 
+.sub_container {
+	padding-left: 1em;
+}
+
 
 .top_container > img {
 	float: left;
@@ -121,13 +125,14 @@ input {
 	width: 55%;
 	float: left;
 	background-color: #efefef;
-	padding-left: 1em;
+	min-width: 310px;
 }
 
 #right_container {
-	width: 43%;
+	width: 45%;
 	float: left;
 	background-color: #efefef;
+	min-width: 310px;
 }
 
 /* Traffic Sources Section */
@@ -188,7 +193,7 @@ input {
 	display: block;
 	width: 50%;
 	margin: auto;
-	min-width: 110px;
+	min-width: 270px;
 }
 
 #total_cost_container p {
@@ -202,6 +207,7 @@ input {
 	font-size: 29px;
 	width: 38%;
 	color: #f7581e;
+	min-width: 140px;
 }
 
 
@@ -260,6 +266,7 @@ input#conversion_rate {
 .viral_conversion_input {
 	padding: 5px 0px 5px 0px;
 	width: 30%;
+	min-width: 60px;
 }
 
 #viral_conversion_main_container {
@@ -377,6 +384,7 @@ p.calculation_header {
 	margin-left: 1em;
 	width: 10%;
 	color: #30c4a2;
+	min-width: 42px;
 }
 
 #roi_per_action_container input.participants_per_action {
@@ -389,6 +397,7 @@ p.calculation_header {
 	width: 9%;
 	margin-left: 4.5%;
 	color: #30c4a2;
+	min-width: 46px;
 }
 
 #roi_per_action_container input.total_value_per_action {
@@ -410,13 +419,13 @@ p.calculation_header {
 	border-radius: 6px;
 	padding-left: 1em;
 	font-size: 165%;
-	min-width: 300px;
 }
 
 #total_value_container input {
 	font-size: 100%;
 	margin-left: 1em;
 	width: 43%;
+	min-width: 176px;
 }
 
 /* End Calculator Section */
