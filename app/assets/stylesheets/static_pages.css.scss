@@ -2,6 +2,50 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+
+}
+
+@media screen and (min-width: 600px) and (max-width: 1576px) { 
+	.top_container {
+		background: #efefef;
+		height: 110px;
+		float: left;
+		width: 100%;
+	}
+
+	#color_box_container {
+		width: 57%;
+	}
+
+	.color_box {
+		width: 32%;
+	}
+}
+
+@media screen and (min-width: 1576px) {
+	.color_box {
+		width: 33%;
+	}
+
+	.top_container {
+		background: #efefef;
+		height: 110px;
+		float: left;
+		width: 100%;
+	}
+
+	#color_box_container {
+		width: 57%;
+	}
+}
+
+@media screen and (min-width: 1544px) {
+
+}
+
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;
@@ -22,27 +66,27 @@ h3 {
 }
 
 img {
-	height: 30px;
 	display: inline-block;
 	padding: 2.5em;
 }
 
 input {
 	color: #f7581e;
-	font-size: 14px;
+	font-size: 85%;
 	border: none;
 	border-radius: 6px;
 }
 
 .container {
-	width: 1400px;
+	width: 89.5%;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-.top_container {
-	background: #efefef;
-	height: 110px;
+
+.top_container > img {
+	float: left;
+	width: 21%;
 }
 
 /* Begin Top Container CSS */
@@ -54,7 +98,6 @@ input {
 
 .color_box {
 	height: 30px;
-	width: 290px;
 	display: inline-block;
 	margin: 0;
 	vertical-align: top;
@@ -62,12 +105,10 @@ input {
 
 #color_box_left {
 	background-color: #505654;
-	margin-right: -4px;
 }
 
 #color_box_middle {
 	background-color: #30c4a2;
-	margin-right: -4px;
 }
 
 #color_box_right {
@@ -85,7 +126,7 @@ input {
 
 #right_container {
 	width: 43%;
-	float: right;
+	float: left;
 	background-color: #efefef;
 }
 
@@ -101,24 +142,25 @@ input {
 	}
 
 	.traffic_source {
-		width: 180px;
-		display: inline-block;
+		width: 23.7%;
+		display: inline-table;
 		margin: 0px 7px 0px 0px;
 
  		input {
-			padding: 5px 0px 5px 0px;
-			width: 97px;
+			padding: 2% 0px 2% 0px;
+			width: 40%;
 		}
 	}
 }
 
 .traffic_source_input_container, .viral_conversion_sub_container {
 	display: inline-block;
-	width: 176px;
+	width: 30%;
 	background: white;
 	border-radius: 6px;
-	margin: 10px 0px 0px 0px;
-	padding-left: 4px;
+	margin: 8px 0px 0px 0px;
+	padding-left: 2%;
+	min-width: 178px;
 
 	p {
 		display: inline-block;
@@ -127,9 +169,9 @@ input {
 }
 
 .traffic_source_label, .viral_conversion_label {
-	font-size: 9px;
+	font-size: 66%;
 	padding: 0;
-	min-width: 54px;
+	min-width: 75px;
 }
 
 #total_cost_container {
@@ -144,8 +186,9 @@ input {
 
 #total_cost_container div {
 	display: block;
-	width: 430px;
-	margin-left: 209px;
+	width: 50%;
+	margin: auto;
+	min-width: 110px;
 }
 
 #total_cost_container p {
@@ -157,7 +200,7 @@ input {
 	background: none;
 	display: inline-block;
 	font-size: 29px;
-	width: 190px;
+	width: 38%;
 	color: #f7581e;
 }
 
@@ -165,13 +208,14 @@ input {
 .click_through_percent_container {
 	background-image: url("percent_orange.png");
 	background-repeat: no-repeat;
-	background-position: 59% 47%;
-	background-size: 13px;
+	background-position: 72% 51%;
+	background-size: 10%;
 }
 
 .container #traffic_sources_container .traffic_source input#ctr_email, .container #traffic_sources_container .traffic_source input#ctr_website {
 	background: transparent;
-	width: 35px;
+	width: 22%;
+	min-width: 10px;
 }
 
 /* End Traffic Sources Section */
@@ -179,15 +223,16 @@ input {
 /* Conversion Section */
 
 .conversion_sub_container {
-	width: 190px;
-	display: inline-block;
-	margin: 0px 8px 0px 0px;
+	width: 30%;
+	display: inline-table;
+	margin: 0px 24px 0px 0px;
+	min-width: 120px;
 }
 
 .conversion_sub_container input {
 	padding: 9px;
-	width: 150px;
-	font-size: 27px;
+	width: 100%;
+	font-size: 159%;
 	text-align: center;
 }
 
@@ -200,7 +245,8 @@ input {
 	height: 52px;
 	background-image: url('percent_orange.png');
 	background-repeat: no-repeat;
-	background-position: 86% 51%;
+	background-position: 98% 53%;
+	background-size: 19%;
 }
 
 input#conversion_rate {
@@ -213,15 +259,11 @@ input#conversion_rate {
 
 .viral_conversion_input {
 	padding: 5px 0px 5px 0px;
-	width: 97px;
+	width: 30%;
 }
 
 #viral_conversion_main_container {
 	padding-bottom: 1em;
-}
-
-.viral_conversion_sub_container {
-	width: 216px;
 }
 
 
@@ -286,33 +328,34 @@ input#conversion_rate {
 #roi_per_action_container div#calculator_heading {
 	display: inline-block;
 	margin: 0px;
+	width: 100%;
 }
 
 #calculator_heading p {
 	display: inline-block;
-	width: 70px;
+	width: 12%;
 	font-size: 12px;
 }
 
 #calculator_heading p:first-child {
-	margin-left: 2.5em;
+	margin-left: 5%;
 }
 
 #calculator_heading p:nth-child(2) {
-	margin-left: 3.5em;
+	margin-left: 6%;
 }
 
 #calculator_heading p:nth-child(3) {
-	margin-left: 2em;
+	margin-left: 2.5%;
 }
 
 #calculator_heading p:nth-child(4) {
-	margin-left: 4.8em;
+	margin-left: 8.3%;
 }
 
-#calculator_heading p:nth-child(5) {
-	margin-left: 2.3em;
-}
+/*#calculator_heading p:nth-child(5) {
+	margin-left: 5%;
+}*/
 
 #roi_per_action_container input {
 	background: none;
@@ -327,31 +370,32 @@ input#conversion_rate {
 p.calculation_header {
 	margin: 0px;
 	display: inline-block;
-	min-width: 130px;
+	min-width: 20.5%;
 }
 
 #roi_per_action_container input.average_engagement_percentage {
 	margin-left: 1em;
-	width: 57px;
+	width: 10%;
 	color: #30c4a2;
 }
 
 #roi_per_action_container input.participants_per_action {
-	width: 90px;
-	margin-left: 23px;
+	width: 13.5%;
+	margin-left: 2.5%;
 	color: #30c4a2;
 }
 
 #roi_per_action_container input.value_per_action {
-	width: 60px;
-	margin-left: 23px;
+	width: 9%;
+	margin-left: 4.5%;
 	color: #30c4a2;
 }
 
 #roi_per_action_container input.total_value_per_action {
-	width: 90px;
-	margin-left: 23px;
+	width: 14%;
+	margin-left: 1%;
 	color: #30c4a2;
+	min-width: 76px;
 }
 
 #total_value_container input, #total_value_container p {
@@ -365,13 +409,14 @@ p.calculation_header {
 	width: 89%;
 	border-radius: 6px;
 	padding-left: 1em;
-	font-size: 29px;
+	font-size: 165%;
+	min-width: 300px;
 }
 
 #total_value_container input {
-	font-size: 29px;
+	font-size: 100%;
 	margin-left: 1em;
-	width: 300px;
+	width: 43%;
 }
 
 /* End Calculator Section */
