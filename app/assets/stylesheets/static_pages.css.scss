@@ -2,10 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 480px) {
+@media screen and (min-width: 320px) and (max-width : 600px){
+	.top_container > img {
+		width: 16em;
+	}
 
+	#left_container {
+		width: 100%;
+	}
+
+	.container #traffic_sources_container {
+		text-align: center;
+	}
 }
 
 @media screen and (min-width: 600px) and (max-width: 1576px) { 
@@ -16,6 +24,10 @@ and (max-device-width : 480px) {
 		width: 100%;
 	}
 
+	.top_container > img {
+		width: 16em;
+	}
+
 	#color_box_container {
 		width: 57%;
 	}
@@ -23,9 +35,21 @@ and (max-device-width : 480px) {
 	.color_box {
 		width: 32%;
 	}
+
+	#left_container {
+		width: 55%;
+	}
+
+	.container #traffic_sources_container {
+		text-align: left;
+	}
 }
 
 @media screen and (min-width: 1576px) {
+	.top_container > img {
+		width: 16em;
+	}
+
 	.color_box {
 		width: 33%;
 	}
@@ -40,11 +64,13 @@ and (max-device-width : 480px) {
 	#color_box_container {
 		width: 57%;
 	}
+
+	#left_container {
+		width: 55%;
+	}
 }
 
-@media screen and (min-width: 1544px) {
 
-}
 
 @font-face {
   font-family: 'Open Sans';
@@ -90,7 +116,6 @@ input {
 
 .top_container > img {
 	float: left;
-	width: 21%;
 }
 
 /* Begin Top Container CSS */
@@ -122,7 +147,6 @@ input {
 /* End Top Container CSS */
 
 #left_container {
-	width: 55%;
 	float: left;
 	background-color: #efefef;
 	min-width: 310px;
@@ -139,7 +163,6 @@ input {
 
 .container #traffic_sources_container {
 	border: none;
-	text-align: left;
 	width: 100%;
 
 	p {
@@ -251,8 +274,8 @@ input {
 	height: 52px;
 	background-image: url('percent_orange.png');
 	background-repeat: no-repeat;
-	background-position: 98% 53%;
-	background-size: 19%;
+	background-position: 96% 53%;
+	background-size: 20px;
 }
 
 input#conversion_rate {
