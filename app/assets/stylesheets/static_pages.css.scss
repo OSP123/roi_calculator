@@ -15,8 +15,8 @@
 		text-align: center;
 	}
 
-	.color_box {
-		min-width: 111px;
+	#total_value_container {
+		max-width: 259px;
 	}
 	
 }
@@ -33,14 +33,6 @@
 		width: 16em;
 	}
 
-	#color_box_container {
-		width: 57%;
-	}
-
-	.color_box {
-		width: 32%;
-	}
-
 	#left_container {
 		width: 55%;
 	}
@@ -55,19 +47,11 @@
 		width: 16em;
 	}
 
-	.color_box {
-		width: 33%;
-	}
-
 	.top_container {
 		background: #efefef;
 		height: 110px;
 		float: left;
 		width: 100%;
-	}
-
-	#color_box_container {
-		width: 57%;
 	}
 
 	#left_container {
@@ -128,13 +112,15 @@ input {
 #color_box_container {
 	display: inline-block;
 	float: right;
+	min-width: 100%;
 }
 
 .color_box {
 	height: 30px;
 	display: inline-block;
 	margin: 0;
-	vertical-align: top;
+	float: left;
+	width: 33.33%;
 }
 
 #color_box_left {
@@ -161,7 +147,7 @@ input {
 	width: 45%;
 	float: left;
 	background-color: #efefef;
-	min-width: 310px;
+	min-width: 344px;
 }
 
 /* Traffic Sources Section */
