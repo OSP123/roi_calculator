@@ -18,7 +18,18 @@
 	#total_value_container {
 		max-width: 259px;
 	}
+
+	#conversion_container {
+		text-align: center;
+	}
 	
+	#viral_conversion_main_container {
+		text-align: center;
+	}
+
+	#right_container {
+		text-align: center;
+	}
 }
 
 @media screen and (min-width: 600px) and (max-width: 1576px) { 
@@ -422,14 +433,13 @@ p.calculation_header {
 }
 
 #total_value_container input, #total_value_container p {
-	display: inline-block;
+	display: block;
 	color: white;
 }
 
 #total_value_container {
 	background: #30c4a2;
 	color: #40B549;
-	width: 89%;
 	border-radius: 6px;
 	padding: 1em;
 	font-size: 165%;
@@ -437,9 +447,8 @@ p.calculation_header {
 
 #total_value_container input {
 	font-size: 100%;
-	margin-left: 1em;
-	width: 43%;
-	min-width: 176px;
+	min-width: 236px;
+
 }
 
 /* End Calculator Section */
