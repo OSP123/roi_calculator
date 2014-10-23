@@ -30,6 +30,11 @@
 	#right_container {
 		text-align: center;
 	}
+
+	#roi_per_action_container div#total_value_container {
+		display: block;
+		width: 90%;
+	}
 }
 
 @media screen and (min-width: 600px) and (max-width: 1576px) { 
@@ -51,6 +56,11 @@
 	.container #traffic_sources_container {
 		text-align: left;
 	}
+
+	#roi_per_action_container div#total_value_container {
+		display: block;
+		width: 90%;
+	}
 }
 
 @media screen and (min-width: 1576px) {
@@ -67,6 +77,11 @@
 
 	#left_container {
 		width: 55%;
+	}
+
+	#roi_per_action_container div#total_value_container {
+		display: block;
+		width: 90%;
 	}
 }
 
@@ -232,7 +247,7 @@ input {
 	font-size: 29px;
 	width: 38%;
 	color: #f7581e;
-	min-width: 140px;
+	min-width: 180px;
 }
 
 
@@ -443,12 +458,15 @@ p.calculation_header {
 	border-radius: 6px;
 	padding: 1em;
 	font-size: 165%;
+	text-align: center;
 }
 
 #total_value_container input {
 	font-size: 100%;
 	min-width: 236px;
-
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
 }
 
 /* End Calculator Section */
