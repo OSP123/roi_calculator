@@ -1,0 +1,86 @@
+@media screen and (min-width: 320px) and (max-width : 600px){
+	.top_container > img {
+		width: 16em;
+	}
+
+	#left_container {
+		width: 100%;
+	}
+
+	.container #traffic_sources_container {
+		text-align: center;
+	}
+
+	#total_value_container {
+		max-width: 259px;
+	}
+
+	#conversion_container {
+		text-align: center;
+	}
+	
+	#viral_conversion_main_container {
+		text-align: center;
+	}
+
+	#right_container {
+		text-align: center;
+	}
+
+	#roi_per_action_container div#total_value_container {
+		display: block;
+		width: 90%;
+	}
+
+	#total_cost_container {
+		max-width: 251px;
+	}
+}
+
+@media screen and (min-width: 600px) and (max-width: 1576px) { 
+	.top_container {
+		background: #efefef;
+		height: 110px;
+		float: left;
+		width: 100%;
+	}
+
+	.top_container > img {
+		width: 16em;
+	}
+
+	#left_container {
+		width: 55%;
+	}
+
+	.container #traffic_sources_container {
+		text-align: left;
+	}
+
+	#roi_per_action_container div#total_value_container {
+		display: block;
+		width: 90%;
+	}
+}
+
+@media screen and (min-width: 1576px) {
+	.top_container > img {
+		width: 16em;
+	}
+
+	.top_container {
+		background: #efefef;
+		height: 110px;
+		float: left;
+		width: 100%;
+	}
+
+	#left_container {
+		width: 55%;
+	}
+
+	#roi_per_action_container div#total_value_container {
+		display: block;
+		width: 90%;
+	}
+}
