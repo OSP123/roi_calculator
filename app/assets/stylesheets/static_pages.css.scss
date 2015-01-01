@@ -107,8 +107,9 @@ input {
 		margin: 0px 7px 0px 0px;
 
  		input {
-			padding: 2% 0px 2% 0px;
 			width: 40%;
+			position: relative;
+			bottom: 1px;
 		}
 	}
 }
@@ -163,21 +164,29 @@ input {
 	font-size: 29px;
 	width: 38%;
 	color: #f7581e;
-	min-width: 180px;
+	min-width: 110px;
 }
 
 
-.click_through_percent_container {
+#ctr_email, #ctr_website {
 	background-image: url("percent_orange.png");
 	background-repeat: no-repeat;
-	background-position: 72% 51%;
-	background-size: 10%;
+	background-position: 25% 52%;
+	background-size: 21%;
 }
 
-.container #traffic_sources_container .traffic_source input#ctr_email, .container #traffic_sources_container .traffic_source input#ctr_website {
-	background: transparent;
-	width: 22%;
-	min-width: 10px;
+#viral_conversion_rate {
+	background-image: url("percent_orange.png");
+	background-repeat: no-repeat;
+	background-position: 55% 52%;
+	background-size: 21%;
+}
+
+#conversion_rate {
+	background-image: url("percent_orange.png");
+	background-repeat: no-repeat;
+	background-position: 84% 51%;
+	background-size: 23px;
 }
 
 /* End Traffic Sources Section */
@@ -205,14 +214,6 @@ input {
 	padding: 0;
 	display: inline-block;
 	height: 52px;
-	background-image: url('percent_orange.png');
-	background-repeat: no-repeat;
-	background-position: 96% 53%;
-	background-size: 20px;
-}
-
-input#conversion_rate {
-	background: transparent;
 }
 
 /* End Conversion Section */
